@@ -1,0 +1,18 @@
+site_name: UpdateHub Documentation
+site_description: 'All your devices, always updated.'
+site_url: 'https://updatehub.io'
+copyright: 'Copyright © 2017 O.S. Systems'
+theme: material
+theme_dir: theme
+extra:
+  logo: assets/images/logo.png
+  font:
+    text: 'Fira Sans'
+  social:
+    - type: globe
+      link: https://updatehub.io
+    - type: 'github'
+      link: 'https://github.com/UpdateHub'
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
