@@ -1,4 +1,4 @@
-site_name: UpdateHub Documentation
+site_name: updatehub Documentation
 site_description: 'All your devices, always updated.'
 site_url: !!python/object/apply:os.getenv ["SITE"]
 site_favicon: assets/images/favicon.ico
@@ -13,7 +13,7 @@ extra:
     - type: globe
       link: https://updatehub.io
     - type: 'github'
-      link: 'https://github.com/UpdateHub'
+      link: 'https://github.com/updatehub'
 pages:
   - Welcome: index.md
   - Getting Started:
