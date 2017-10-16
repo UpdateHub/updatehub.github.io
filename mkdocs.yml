@@ -1,6 +1,7 @@
 site_name: UpdateHub Documentation
 site_description: 'All your devices, always updated.'
 site_url: 'https://updatehub.io'
+site_favicon: assets/images/favicon.ico
 copyright: 'Copyright © 2017 O.S. Systems'
 theme: material
 theme_dir: theme
