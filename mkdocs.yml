@@ -19,3 +19,5 @@ google_analytics:
   - auto
 pages:
   - Welcome: index.md
+  - Getting Started:
+    - What is updatehub?: getting-started/what-is-updatehub.md
