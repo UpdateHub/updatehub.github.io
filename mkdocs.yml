@@ -17,3 +17,5 @@ extra:
 google_analytics:
   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
   - auto
+pages:
+  - Welcome: index.md
