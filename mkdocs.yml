@@ -27,3 +27,7 @@ pages:
       - Overview: advanced/updatehub-agent/overview.md
       - Configuration: advanced/updatehub-agent/configuration.md
       - Device Identity Scripts: advanced/updatehub-agent/device-identity-scripts.md
+    - updatehub Utilities (uhu):
+      - Overview: advanced/uhu/overview.md
+      - Getting Started: advanced/uhu/getting-started.md
+      - Creating an update package: advanced/uhu/creating-update-package.md
