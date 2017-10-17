@@ -5,6 +5,10 @@ site_favicon: assets/images/favicon.ico
 copyright: 'Copyright © 2017 O.S. Systems'
 theme: material
 theme_dir: theme
+markdown_extensions:
+  - markdown.extensions.codehilite
+  - markdown.extensions.admonition
+  - markdown.extensions.def_list
 extra:
   logo: assets/images/logo.png
   font:
