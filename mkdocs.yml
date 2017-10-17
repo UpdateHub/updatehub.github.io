@@ -25,3 +25,4 @@ pages:
   - Advanced:
     - updatehub Agent:
       - Overview: advanced/updatehub-agent/overview.md
+      - Configuration: advanced/updatehub-agent/configuration.md
