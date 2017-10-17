@@ -22,3 +22,6 @@ pages:
   - Welcome: index.md
   - Getting Started:
     - What is updatehub?: getting-started/what-is-updatehub.md
+  - Advanced:
+    - updatehub Agent:
+      - Overview: advanced/updatehub-agent/overview.md
