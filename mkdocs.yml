@@ -22,6 +22,10 @@ pages:
   - Welcome: index.md
   - Getting Started:
     - What is updatehub?: getting-started/what-is-updatehub.md
+  - Yocto Integration:
+    - Overview: yocto-integration/overview.md
+    - BSP Layers: yocto-integration/bsp-layers.md
+    - Image Classes: yocto-integration/image-classes.md
   - Advanced:
     - updatehub Agent:
       - Overview: advanced/updatehub-agent/overview.md
