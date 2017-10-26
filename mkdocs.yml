@@ -20,8 +20,7 @@ extra:
       link: 'https://github.com/updatehub'
 pages:
   - Welcome: index.md
-  - Getting Started:
-    - What is updatehub?: getting-started/what-is-updatehub.md
+  - Overview: overview.md
   - Yocto Integration:
     - Overview: yocto-integration/overview.md
     - BSP Layers: yocto-integration/bsp-layers.md
