@@ -33,7 +33,7 @@ require any special dependencies on the build system. Simply include the
 meta-updatehub layer and the BSP support layer to your build and it will be
 ready to generate a new image with the system.
 
-# Web and application access to the management server
+# Management server access
 
 This section will show how to access the management server and retrieve the
 credentials for working with updates on your Yocto project build. Your
