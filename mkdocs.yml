@@ -19,8 +19,7 @@ extra:
     - type: 'github'
       link: 'https://github.com/updatehub'
 pages:
-  - Welcome: index.md
-  - Overview: overview.md
+  - Overview: index.md
   - Quick Start: quick-start.md
   - Yocto Integration:
     - Overview: yocto-integration/overview.md
