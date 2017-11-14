@@ -21,6 +21,7 @@ extra:
 pages:
   - Welcome: index.md
   - Overview: overview.md
+  - Quick Start: quick-start.md
   - Yocto Integration:
     - Overview: yocto-integration/overview.md
     - BSP Layers: yocto-integration/bsp-layers.md
