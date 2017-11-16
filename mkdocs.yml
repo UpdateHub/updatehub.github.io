@@ -9,6 +9,7 @@ markdown_extensions:
   - markdown.extensions.codehilite
   - markdown.extensions.admonition
   - markdown.extensions.def_list
+
 extra:
   logo: assets/images/logo.png
   font:
@@ -18,6 +19,7 @@ extra:
       link: https://updatehub.io
     - type: 'github'
       link: 'https://github.com/updatehub'
+
 pages:
   - Overview: index.md
   - Quick Start: quick-start.md
