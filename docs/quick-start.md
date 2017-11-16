@@ -33,6 +33,23 @@ require any special dependencies on the build system. Simply include the
 meta-updatehub layer and the BSP support layer to your build and it will be
 ready to generate a new image with the system.
 
+# Generate key pair for UHU package signing
+
+This is needed to validate the generated update package. Each device will contain
+the public key which will validate any received package before uncompressing it
+and applying an update.
+
+```
+user@dev$ mkdir -p /home/user/.updatehub/keys
+user@dev$ openssl genpkey -algorithm RSA -out /home/user/.updatehub/keys/private_key.pem -pkeyopt rsa_keygen_bits:4096
+user@dev$ openssl rsa -pubout -in /home/user/.updatehub/keys/private_key.pem -out /home/user/.updatehub/keys/public_key.pem
+```
+
+!!! warning
+    Keep in mind that once an update has been generated and applied with a key
+    it will not validate any packages with another key, so *keeping any
+    generated keys safe **MUST** be a top priority for your organization*.
+
 # Management server access
 
 This section will show how to access the management server and retrieve the
@@ -80,6 +97,14 @@ retrieved from the previous section:
 ```
 UPDATEHUB_ACCESS_ID = "test@updatehub.io-63bafeebf4325aac16f0"
 UPDATEHUB_ACCESS_SECRET = "bf916b808410c6dd4ab88a491e867046f6bbf89f"
+```
+
+And then include the key pair files path generated before also to
+`build/conf/local.conf`:
+
+```
+UPDATEHUB_UHUPKG_PUBLIC_KEY = "/home/user/.updatehub/keys/public_key.pem"
+UPDATEHUB_UHUPKG_PRIVATE_KEY = "/home/user/.updatehub/keys/private_key.pem"
 ```
 
 ## Product creation at the management server
