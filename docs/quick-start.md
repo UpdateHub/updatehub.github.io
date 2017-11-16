@@ -26,14 +26,14 @@ document:
 For the sake of specificity we will use the Raspberry Pi as the machine for this
 quick start. To check other machines supported by **updatehub** please check this.
 
-# Dependencies
+## Dependencies
 
 Including **updatehub** to your project should be fairly simple, as it doesn't
 require any special dependencies on the build system. Simply include the
 meta-updatehub layer and the BSP support layer to your build and it will be
 ready to generate a new image with the system.
 
-# Generate key pair for UHU package signing
+## Generate key pair for UHU package signing
 
 This is needed to validate the generated update package. Each device will contain
 the public key which will validate any received package before uncompressing it
@@ -50,7 +50,7 @@ user@dev$ openssl rsa -pubout -in /home/user/.updatehub/keys/private_key.pem -ou
     it will not validate any packages with another key, so *keeping any
     generated keys safe **MUST** be a top priority for your organization*.
 
-# Management server access
+## Management server access
 
 This section will show how to access the management server and retrieve the
 credentials for working with updates on your Yocto project build. Your
@@ -89,7 +89,7 @@ key:
 With those credentials the **updatehub** Yocto layers will have the necessary
 information to access the management server API and push new updates.
 
-# Project setup with updatehub
+## Project setup with updatehub
 
 First, add the ID and secret to you project `build/conf/local.conf`. Using the values
 retrieved from the previous section:
@@ -107,7 +107,7 @@ UPDATEHUB_UHUPKG_PUBLIC_KEY = "/home/user/.updatehub/keys/public_key.pem"
 UPDATEHUB_UHUPKG_PRIVATE_KEY = "/home/user/.updatehub/keys/private_key.pem"
 ```
 
-## Product creation at the management server
+### Product creation at the management server
 
 On the main page click on the "Add product" button, and type in "Test" in the
 "Type your product name" field and select "Me" at the "Select the product owner"
@@ -131,7 +131,7 @@ Copy the UID and edit your `build/conf/local.conf` to set the variable
 UPDATEHUB_PRODUCT_UID = "05344b71c3e9f89c799f775a213b013932bc962b89ae8a29af66b51b099cdbeb"
 ```
 
-## Integrating updatehub Yocto Project layers to your build
+### Integrating updatehub Yocto Project layers to your build
 
 Including the **updatehub** Yocto layers to your build is easy: first clone the
 meta-updatehub layer and the machine support layer to your sources directory:
@@ -153,7 +153,7 @@ With that the layers should be integrated with your build. Keep developing your
 solution as you normally would. After the build more steps are necessary to push
 your changes to the management server.
 
-## Create and push a new package to the updatehub server
+### Create and push a new package to the updatehub server
 
 When a new build with changes has successfully finished another commands must be
 run to push the changes to the updatehub management server.
@@ -165,7 +165,7 @@ user@dev:~/project/sources$ bitbake core-image-base -c uhupush
 After that is done the update should appear in the management server web
 interface.
 
-## Creating and starting a new rollout
+### Creating and starting a new rollout
 
 With a new packaged build version pushed to the management server a new rollout
 can be created based on this new version. Go to the product page no the
