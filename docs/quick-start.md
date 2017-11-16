@@ -64,9 +64,10 @@ key:
 
 ![updatehub access ID creation](img/quickstart/created-access-id.png)
 
-Please keep in mind that **THIS IS THE ONLY TIME THE ACCESS KEY WILL EVER BE
-AVAILABLE TO YOU!** After closing the window the access key cannot be retrieved
-again, so be sure to copy and save it on a confiable medium!
+!!! warning
+    Please keep in mind that **THIS IS THE ONLY TIME THE ACCESS KEY WILL EVER BE
+    AVAILABLE TO YOU!** After closing the window the access key cannot be
+    retrieved again, so be sure to copy and save it on a reliable medium!
 
 With those credentials the **updatehub** Yocto layers will have the necessary
 information to access the management server API and push new updates.
