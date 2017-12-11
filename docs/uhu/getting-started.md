@@ -9,6 +9,7 @@ You can get your access and secrete keys in UpdateHub web interface.
 
 After that you are ready to start creating update packages.
 
-!!! info
-    You just have to do this step once, since uhu will save your credentials at $HOME/.uhu.
-    If you need to update your credentials, you may use the auth command within interactive prompt.
+{% hint style='info' %}
+You just have to do this step once, since uhu will save your credentials at $HOME/.uhu.
+If you need to update your credentials, you may use the auth command within interactive prompt.
+{% endhint %}

@@ -1,0 +1,21 @@
+{
+    "root": "./docs",
+    "plugins": [ "theme-gestalt",
+		 "-theme-default",
+		 "styles-sass-fix",
+		 "hints"],
+    "pluginsConfig": {
+	"theme-default": {
+	    "showLevel": true
+	},
+	"theme-gestalt": {
+	    "logo": "/img/assets/logo.png",
+	    "favicon": "/img/assets/favicon.png",
+	    "baseUrl": null,
+	    "doNotHideChildrenChapters": false
+	}
+    },
+    "styles": {
+	"website": ""
+    }
+}

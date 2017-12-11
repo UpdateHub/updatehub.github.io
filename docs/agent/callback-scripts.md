@@ -8,9 +8,10 @@ This callback is executed **before** every state changes with following argument
 
 **Path**: ```/usr/share/updatehub/state-change-callback```
 
-!!! info
-    The output of callback script are parsed to determine transition state flow.
-    To cancel the current state transition, the callback must write to stdout: ```cancel```
+{% hint style='info' %}
+The output of callback script are parsed to determine transition state flow.
+To cancel the current state transition, the callback must write to stdout: ```cancel```
+{% endhint %}
 
 ## After State Tranistion
 
@@ -20,9 +21,10 @@ This callback is executed **after** every state changes with following arguments
 
 **Path**: ```/usr/share/updatehub/state-change-callback```
 
-!!! info
-    The output of callback script are parsed to determine transition state flow.
-    To cancel the current state transition, the callback must write to stdout: ```cancel```
+{% hint style='info' %}
+The output of callback script are parsed to determine transition state flow.
+To cancel the current state transition, the callback must write to stdout: ```cancel```
+{% endhint %}
 
 ## Error
 
@@ -30,8 +32,9 @@ This callback is executed whenever an error occurs.
 
 **Path**: ```/usr/share/updatehub/error-callback```
 
-!!! info
-    It's output is ignored.
+{% hint style='info' %}
+It's output is ignored.
+{% endhint %}
 
 ## Validate
 
@@ -39,9 +42,10 @@ This callback is executed whenever a new installation is booted.
 
 **Path**: ```/usr/share/updatehub/validate-callback```
 
-!!! warning
-    If this callback succeeds the installation is validated and proceeds as normal.
-    If it fails, the agent forces a reboot into the previous installation.
+{% hint style='danger' %}
+If this callback succeeds the installation is validated and proceeds as normal.
+If it fails, the agent forces a reboot into the previous installation.
+{% endhint %}
 
 ## Rollback
 

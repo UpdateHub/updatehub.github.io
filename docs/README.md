@@ -6,10 +6,10 @@ by providing a robust and easy software update process.
 
 # Workflow
 
-![updatehub workflow](img/workflow.png)
+![updatehub workflow](/img/workflow.png)
 
 To create a update rollout for a set of devices it's important to understand the
-worflow to do so. This will help avoid problems that could compromise the
+worflow to do so. This will help avoid problems that compromise the
 devices' stability and security.
 
 **updatehub** works in rollouts that will gradually update every device. Each

@@ -1,23 +1,20 @@
-FROM alpine:3.6
+FROM node:9.2.1-alpine as builder
 
-RUN apk add --no-cache --update bash python3 py-pip git yarn && \
-    pip install mkdocs pygments pymdown-extensions
+RUN npm install --global gitbook-cli && \
+	gitbook fetch 3.2.1
 
-RUN git clone -b updatehub https://github.com/updatehub/mkdocs-material.git /usr/local/src/mkdocs-material
-
-WORKDIR /usr/local/src/mkdocs-material
-
-RUN pip install -r requirements.txt && yarn install && yarn run build
-RUN pip install -e .
-
+ADD book.json /usr/local/src/updatehub-docs/
 ADD docs /usr/local/src/updatehub-docs/docs
-ADD theme /usr/local/src/updatehub-docs/theme
-ADD mkdocs.yml /usr/local/src/updatehub-docs
 
 WORKDIR /usr/local/src/updatehub-docs
 
-RUN mkdocs build -d /usr/local/share/docs/updatehub
+RUN gitbook install
+RUN gitbook build
 
-WORKDIR /usr/local/share/docs/updatehub
+FROM alpine:3.6
+
+COPY --from=builder /usr/local/src/updatehub-docs/_book/ /srv/http/
+
+WORKDIR /srv/http
 
 CMD httpd -f

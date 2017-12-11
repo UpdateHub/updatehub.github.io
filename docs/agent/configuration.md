@@ -1,9 +1,9 @@
 **updatehub** Agent configuration file is located at ```/etc/updatehub.conf``` on the device's root filesystem.
 
-!!! tip
-
-    In most of scenarios the configuration file is generated automatically by Yocto build process,
-    however you can change as you need.
+{% hint style='tip' %}
+In most of scenarios the configuration file is generated automatically by Yocto build process,
+however you can change as you need.
+{% endhint %}
 
 The file is INI format. Example:
 

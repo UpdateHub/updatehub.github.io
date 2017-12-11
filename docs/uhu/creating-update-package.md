@@ -1,8 +1,9 @@
 To create a update package, we need to set some basic info first.
 
-!!! note
-    The `show` command will always print your current package data so
-    you can check if everything is ok.
+{% hint style='tip' %}
+The `show` command will always print your current package data so
+you can check if everything is ok.
+{% endhint %}
 
 ### 1. Set the product
 

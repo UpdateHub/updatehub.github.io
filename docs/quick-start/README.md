@@ -45,10 +45,11 @@ user@dev$ openssl genpkey -algorithm RSA -out /home/user/.updatehub/keys/private
 user@dev$ openssl rsa -pubout -in /home/user/.updatehub/keys/private_key.pem -out /home/user/.updatehub/keys/public_key.pem
 ```
 
-!!! warning
-    Keep in mind that once an update has been generated and applied with a key
-    it will not validate any packages with another key, so *keeping any
-    generated keys safe **MUST** be a top priority for your organization*.
+{% hint style='danger' %}
+Keep in mind that once an update has been generated and applied with a key
+it will not validate any packages with another key, so *keeping any
+generated keys safe **MUST** be a top priority for your organization*.
+{% endhint %}
 
 ## Management server access
 
@@ -74,17 +75,18 @@ will be directed to the user settings page. On the "Application access" area
 click on the "Request Access Key" button. Fill in the key name and choose the
 API key owner as "Me", then click on Save.
 
-![updatehub access ID creation](img/quickstart/access-id-creation.png)
+![updatehub access ID creation](/img/quickstart/access-id-creation.png)
 
 The next modal windows will show you your newly created access ID and access
 key:
 
-![updatehub access ID creation](img/quickstart/created-access-id.png)
+![updatehub access ID creation](/img/quickstart/created-access-id.png)
 
-!!! warning
+{% hint style='danger' %}
     Please keep in mind that **THIS IS THE ONLY TIME THE ACCESS KEY WILL EVER BE
     AVAILABLE TO YOU!** After closing the window the access key cannot be
     retrieved again, so be sure to copy and save it on a reliable medium!
+{% endhint %}
 
 With those credentials the **updatehub** Yocto layers will have the necessary
 information to access the management server API and push new updates.
@@ -113,16 +115,16 @@ On the main page click on the "Add product" button, and type in "Test" in the
 "Type your product name" field and select "Me" at the "Select the product owner"
 selection control:
 
-![updatehub access ID creation](img/quickstart/product-creation.png)
+![updatehub access ID creation](/img/quickstart/product-creation.png)
 
 Click on "Create" and the new product should appear on the dashboard.
 
-![updatehub access ID creation](img/quickstart/created-product.png)
+![updatehub access ID creation](/img/quickstart/created-product.png)
 
 Clicking on it should take you to the product page. At the bottom of the page a
 Product UID will be displayed.
 
-![updatehub access ID creation](img/quickstart/product-uid.png)
+![updatehub access ID creation](/img/quickstart/product-uid.png)
 
 Copy the UID and edit your `build/conf/local.conf` to set the variable
 `UPDATEHUB_PRODUCT_UID` with it:
@@ -176,13 +178,13 @@ long you created the product entry. On the example below there is exactly 3
 devices, each with it’s own version, which will all update to the version
 specified:
 
-![updatehub access ID creation](img/quickstart/rollout-creation.png)
+![updatehub access ID creation](/img/quickstart/rollout-creation.png)
 
 The "Version" field should show the available packages pushed to the management
 server. Select it and click "Save and Start". The rollout should be created and
 started immediately:
 
-![updatehub access ID creation](img/quickstart/rollout-status.png)
+![updatehub access ID creation](/img/quickstart/rollout-status.png)
 
 With this the rollout will have started, and any new request for update will
 progress the rollout.
