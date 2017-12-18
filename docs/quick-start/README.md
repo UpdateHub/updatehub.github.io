@@ -147,7 +147,7 @@ user@dev:~/project/sources$ git clone https://github.com/updatehub/meta-updatehu
 Now add the two layers to your `build/conf/bblayers.conf` file:
 
 ```
-user@dev:~/project/sources$ bitbake-layers add-layer sources/meta-updatehub
+user@dev:~/project/sources$ bitbake-layers add-layer meta-updatehub
 user@dev:~/project/sources$ bitbake-layers add-layer meta-updatehub-raspberrypi
 ```
 
