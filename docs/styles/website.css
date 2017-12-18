@@ -75,3 +75,7 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.markdown-section img {
+    border: 1px solid lightgray;
+}
