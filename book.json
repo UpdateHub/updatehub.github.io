@@ -1,9 +1,15 @@
 {
     "root": "./docs",
-    "plugins": [ "hints"],
+    "plugins": [ "hints", "sharing-plus", "-sharing" ],
     "pluginsConfig": {
 	"theme-default": {
 	    "showLevel": true
+	},
+	"sharing": {
+	    "facebook": true,
+	    "twitter": true,
+	    "google": true,
+	    "linkedin": true
 	}
     }
 }
