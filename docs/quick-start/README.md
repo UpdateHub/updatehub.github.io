@@ -141,6 +141,7 @@ meta-updatehub layer and the machine support layer to your sources directory:
 ```
 user@dev:~$ cd project/sources
 user@dev:~/project/sources$ git clone https://github.com/updatehub/meta-updatehub
+user@dev:~/project/sources$ git clone https://github.com/updatehub/meta-updatehub-freescale
 user@dev:~/project/sources$ git clone https://github.com/updatehub/meta-updatehub-raspberrypi
 ```
 
@@ -148,6 +149,7 @@ Now add the two layers to your `build/conf/bblayers.conf` file:
 
 ```
 user@dev:~/project/sources$ bitbake-layers add-layer meta-updatehub
+user@dev:~/project/sources$ bitbake-layers add-layer meta-updatehub-freescale
 user@dev:~/project/sources$ bitbake-layers add-layer meta-updatehub-raspberrypi
 ```
 
