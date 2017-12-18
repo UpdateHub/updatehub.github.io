@@ -69,3 +69,9 @@ header nav .logo a {
 .book-header {
     height: inherit;
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
