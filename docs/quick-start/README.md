@@ -161,7 +161,7 @@ When a new build with changes has successfully finished another commands must be
 run to push the changes to the updatehub management server.
 
 ```
-user@dev:~/project/sources$ bitbake core-image-base -c uhupush
+user@dev:~/project/sources$ bitbake updatehub-image-minimal -c uhupush
 ```
 
 After that is done the update should appear in the management server web
