@@ -3,7 +3,7 @@
     "plugins": [ "hints", "sharing-plus", "-sharing" ],
     "pluginsConfig": {
 	"theme-default": {
-	    "showLevel": true
+	    "showLevel": false
 	},
 	"sharing": {
 	    "facebook": true,
