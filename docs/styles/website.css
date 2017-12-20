@@ -64,6 +64,10 @@ img {
     border: 1px solid lightgray;
 }
 
+.markdown-section img.borderless {
+    border: none;
+}
+
 body {
   padding-top: 5.6rem !important;
   text-rendering: auto !important;
