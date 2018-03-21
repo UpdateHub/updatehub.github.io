@@ -1,3 +1,14 @@
+# Supported Versions
+
+The **updatehub** offers support for multiple versions of the Yocto Project.
+
+Currently, it supports:
+
+* Yocto Project 2.1 - Krogoth
+* Yocto Project 2.2 - Morty
+* Yocto Project 2.3 - Pyro
+* Yocto Project 2.4 - Rocko
+
 The **updatehub** integration with [Yocto Project](https:/yoctoproject.org) is
 done by [`meta-updatehub`](https://github.com/updatehub/meta-updatehub) which
 enables you to create a Yocto Project image with [updatehub

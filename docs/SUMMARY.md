@@ -1,22 +1,16 @@
 # Summary
 
-## Quick start
+## Introduction
 
-* [Introduction](README.md)
-* [Quick start](quick-start/README.md)
+* [What is updatehub?](README.md)
+* [Features](features.md)
+* [Basic Concepts](basics.md)
 
-## Yocto Project
+## Dashboard
 
-* [Yocto Project integration](./yocto-integration/README.md)
-    * [Image classes](./yocto-integration/image-classes.md)
-    * [BSP Layers](./yocto-integration/bsp-layers.md)
-
-## Advanced
-
-* [Device agent](./agent/README.md)
-    * [Configuration](./agent/configuration.md)
-    * [Device identity](./agent/device-identity-scripts.md)
-    * [Callback scripts](./agent/callback-scripts.md)
-* [updatehub utils](./uhu/README.md)
-    * [Getting started](./uhu/getting-started.md)
-    * [Creating an update package](./uhu/creating-update-package.md)
+* [Meet the updatehub](./Dashboard/README.md)
+* [Creating a Product](./Dashboard/creatingProduct.md)
+* [Product Overview](./Dashboard/overview.md)
+* [Rollout Management](./Dashboard/rollout.md)
+* [Device Fleet Management](./Dashboard/device.md)
+* [Device Details](./Dashboard/deviceDetail.md)

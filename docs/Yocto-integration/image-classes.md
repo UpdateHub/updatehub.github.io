@@ -1,3 +1,5 @@
+# Image classes
+
 The updatehub support layer for [Yocto](https://www.yoctoproject.org/) provides
 a set of classes to easily integrate your product with **updatehub**.
 
