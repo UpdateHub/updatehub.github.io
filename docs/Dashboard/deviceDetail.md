@@ -4,12 +4,21 @@ The `Device Details` page provides you access to detailed information about a sp
 
 - The Unique Identifier (UID)
 - The device identity values (e.g. MAC* address, CPU serial number or other)
-- Current installed device version
+- Current installed package version
 - Hardware model
-- The device `Rollout` history.
 - Device state (enabled or disabled)
 - Device attributes
 
-The **updatehub** delivers a complete history about the `Rollout` so the user can check the update's health while it's happening or after it's finished. Besides, with all the information about the device available the user may find easier solutions for any situation that appear.
+Besides the device information, the `Rollout` history of the device allow an easy access to the current and previous device's update status, such as duration, logs about errors and date of the events.
 
 <img class="borderless" alt="updatehub device details" src="/img/deviceDetails.png">
+
+During a normal situation the device `Rollout` will be displayed showing the moment that started, going through all the process until the point that is finished, like in the image below:
+
+<img class="borderless" alt="updatehub device finished" src="/img/finished.png">
+
+In the case of some kind of problem happens during the update process, the **updatehub** will provide a visual feedback of the moment it occured. To examine the failure you need to select `See Device Log`.
+
+<img class="borderless" alt="updatehub device installation" src="/img/deviceLog.png">
+
+This data about the device ensures the user has all information needed for any upcoming situation, being capable of manage his devices within the entire `Product` lifetime.
