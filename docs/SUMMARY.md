@@ -14,3 +14,6 @@
 * [Rollout Management](./Dashboard/rollout.md)
 * [Device Fleet Management](./Dashboard/device.md)
 * [Device Details](./Dashboard/deviceDetail.md)
+* [Package List](./Dashboard/packageList.md)
+* [Package Details](./Dashboard/package.md)
+* [Settings](./Dashboard/settings.md)

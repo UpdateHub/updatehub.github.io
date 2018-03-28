@@ -1,4 +1,4 @@
-# Features
+## Features
 
 The **updatehub** has a rich features set. On the management platform side, it offers support for:
 

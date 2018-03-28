@@ -1,4 +1,4 @@
-### Device Details
+## Device Details
 
 The `Device Details` page provides you access to detailed information about a specific `Device` such as:
 
@@ -11,14 +11,14 @@ The `Device Details` page provides you access to detailed information about a sp
 
 Besides the device information, the `Rollout` history of the device allow an easy access to the current and previous device's update status, such as duration, logs about errors and date of the events.
 
-<img class="borderless" alt="updatehub device details" src="/img/deviceDetails.png">
+![device details](/img/Dashboard/deviceDetails.png)
 
 During a normal situation the device `Rollout` will be displayed showing the moment that started, going through all the process until the point that is finished, like in the image below:
 
-<img class="borderless" alt="updatehub device finished" src="/img/finished.png">
+![device finished](/img/Dashboard/finished.png)
 
 In the case of some kind of problem happens during the update process, the **updatehub** will provide a visual feedback of the moment it occured. To examine the failure you need to select `See Device Log`.
 
-<img class="borderless" alt="updatehub device installation" src="/img/deviceLog.png">
+![device installation](/img/Dashboard/deviceLog.png)
 
 This data about the device ensures the user has all information needed for any upcoming situation, being capable of manage his devices within the entire `Product` lifetime.
