@@ -1,4 +1,4 @@
-## Rollout Management
+## Creating a Rollout
 
 The rollout is the process of deploying a specific version of your software, a `Package`, to a set of `Devices`.
 
