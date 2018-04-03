@@ -8,7 +8,7 @@ By doing that the following dialog will be displayed. You should choose a `Produ
 
 ![product modal](/img/Dashboard/modalProduct.png)
 
-After clicking on `Create` button a dialog will show the product unique identifier that is used in your build system configuration.
+After clicking on the `Create` button a dialog will show the product unique identifier that is used in your build system configuration.
 
 Once you have logged in, the `Products` page will display the list of your own products and the other products you have access to.
 

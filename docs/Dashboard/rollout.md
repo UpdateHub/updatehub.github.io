@@ -8,7 +8,7 @@ There are two methods to execute the `Rollout`.
 
 The simpler way shows all the versions of the `Devices` present on the field to be updated at once.
 
-<img class="borderless" alt="updatehub create rollout" src="/img/Dashboard/createRollout.png">
+![create rollout advanced](/img/Dashboard/createRollout.png)
 
 But if you need more depth and control over the `Rollout` you can choose to filter how to do it by selecting:
 
