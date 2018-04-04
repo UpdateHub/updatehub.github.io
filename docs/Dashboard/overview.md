@@ -1,5 +1,5 @@
 ## Product Overview
 
-Clicking on any product card will take you to the `Product Overview` page. In this page you may find useful information about the product, like which devices you have on the field, the two latest package versions and rollouts status.
+Clicking on any product card, you will be taken to the `Product Overview` page. In this page you find useful information about the `Product`, as which `Devices` you have deployed on the field, the two last `Packages` sent for that particular `Product` and the `Rollouts` status.
 
 ![overview](/img/Dashboard/overview.png)
