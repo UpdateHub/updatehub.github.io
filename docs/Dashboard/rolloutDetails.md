@@ -10,4 +10,4 @@ The **updatehub** also gives all the information with the details of each specif
 - *Play/Pause `Rollout`*: Whenever the user wants to play or pause the `Rollout` the option is available, unless the process is aborted or the user chooses to archive it.
 - *Archive the `Rollout`*: Once the rollout is not necessary anymore it can be archived and stopped definitely.
 
-![overview details](/img/Dashboard/overviewDetails.png)
+![rollout details](/img/Dashboard/rolloutDetails.png)
