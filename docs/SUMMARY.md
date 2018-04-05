@@ -14,6 +14,7 @@
 * [Creating a Rollout](./Dashboard/createRollout.md)
 * [Rollout List](./Dashboard/rolloutList.md)
   * [Rollout Details](./Dashboard/rolloutDetails.md)
+  * [Advanced Rollout](./Dashboard/rolloutAdvanced.md)
 * [Device Fleet Management](./Dashboard/deviceList.md)
   * [Device Details](./Dashboard/deviceDetails.md)
 * [Package List](./Dashboard/packageList.md)
