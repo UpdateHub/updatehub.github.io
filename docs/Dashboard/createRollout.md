@@ -1,24 +1,11 @@
 ## Creating a Rollout
 
-The rollout is the process of deploying a specific version of your software, a `Package`, to a set of `Devices`.
-
-When a new software version for the `Devices` you have on the field is ready to be deployed it´s possible to start the `Rollout`. All the process happens over-the-air (OTA). Besides, if something goes wrong and a failure is detected the **updatehub** will abort the `Rollout` automatically.
-
 There are two methods to execute the `Rollout`.
 
 The simpler way shows all the versions of the `Devices` present on the field to be updated at once.
 
+You just need to go to the `Overview` or `Rollouts` page and click on `Create Rollout`. A box to choose the *version* will appear. After you make this choice just click on `Save` to initiate the `Rollout` later or `Save and Start` launch it straightaway.
+
 ![create rollout advanced](/img/Dashboard/createRollout.png)
 
-But if you need more depth and control over the `Rollout` you can choose to filter how to do it by selecting:
-
-* Name of the Task
-* Device version
-* Unique identifier number
-* Failure tolerance
-* Type of hardware
-* Device Attributes
-
-It is possible to add more than one task to be done using this method. The **updatehub** can complete task by task, creating the opportunity to organize and have a better management of the updates. By choosing to execute the `Rollout` this way you will have complete control over when and which devices will receive the updates.
-
-![create rollout advanced](/img/Dashboard/createRolloutAdvanced.png)
+Keep in mind that this method will trigger the `Rollout` for all the `Devices` accessible for the `Product` chosen, with no restrictions concerning the different hardware or other aspects of the fleet on the field. If the user desires to select which equipment receives the `Rollout` the **updatehub** offers the `Advanced Rollout` option. 
