@@ -22,3 +22,7 @@
 * [Settings](./Dashboard/settings.md)
   * [Access Key](./Dashboard/accessKey.md)
   * [Organization](./Dashboard/organization.md)
+
+## Integration Guide
+
+* [Yocto Project](./Integration-Guide/README.md)
