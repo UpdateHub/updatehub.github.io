@@ -1,7 +1,7 @@
 FROM node:9.2.1-alpine as builder
 
 RUN npm install --global gitbook-cli && \
-	gitbook fetch 3.2.1
+	gitbook fetch 3.2.3
 
 ADD book.json /usr/local/src/updatehub-docs/
 ADD docs /usr/local/src/updatehub-docs/docs
