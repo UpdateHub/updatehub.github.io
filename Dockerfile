@@ -1,4 +1,4 @@
-FROM node:9.2.1-alpine as builder
+FROM node:9.11.1-alpine as builder
 
 RUN npm install --global gitbook-cli && \
 	gitbook fetch 3.2.3
