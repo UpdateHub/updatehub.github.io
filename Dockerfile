@@ -11,10 +11,6 @@ WORKDIR /usr/local/src/updatehub-docs
 RUN gitbook install
 RUN gitbook build
 
-FROM alpine:3.7
+FROM httpd:2.4.33-alpine
 
-COPY --from=builder /usr/local/src/updatehub-docs/_book/ /srv/http/
-
-WORKDIR /srv/http
-
-CMD httpd -f
+COPY --from=builder /usr/local/src/updatehub-docs/_book/ /usr/local/apache2/htdocs/
