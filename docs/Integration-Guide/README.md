@@ -16,15 +16,15 @@ Besides the basic support, there are many boards with **updatehub** support, pro
 
 |  Board full name                        | BSP layer name                                                                                              | Machine name   | Branch name |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------|----------------|-------------|
-| BeagleBone Black                        | <a href="https://github.com/updatehub/meta-updatehub-ti/tree/rocko">meta-updatehub-ti</a>                   | beaglebone     | rocko       |
-| Raspberry Pi 3                          | <a href="https://github.com/updatehub/meta-updatehub-raspberrypi/tree/rocko">meta-updatehub-raspberrypi</a> | raspberrypi3   | rocko       |
-| NXP i.MX6QP/Q/DL SABRE Smart Device     | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | imx6qdlsabresd | rocko       |
-| Boundary Devices Nitrogen6X             | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | nitrogen6x     | rocko       |
-| Boundary Devices i.MX6 SABRELite        | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | nitrogen6x     | rocko       |
-| TechNexion i.MX7 PICO                   | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | imx7d-pico     | rocko       |
-| Toradex Apalis iMX6Q/D                  | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | apalis-imx6    | rocko       |
-| WaRP7                                   | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | imx7s-warp     | rocko       |
-| Wandboard i.MX6 QuadPlus/Quad/Dual/Solo | <a href="https://github.com/updatehub/meta-updatehub-freescale/tree/rocko">meta-updatehub-freescale</a>     | wandboard      | rocko       |
+| BeagleBone Black                        | [meta-updatehub-ti](https://github.com/updatehub/meta-updatehub-ti/tree/rocko)                   | beaglebone     | rocko       |
+| Raspberry Pi 3                          | [meta-updatehub-raspberrypi](https://github.com/updatehub/meta-updatehub-raspberrypi/tree/rocko) | raspberrypi3   | rocko       |
+| NXP i.MX6QP/Q/DL SABRE Smart Device     | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | imx6qdlsabresd | rocko       |
+| Boundary Devices Nitrogen6X             | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | nitrogen6x     | rocko       |
+| Boundary Devices i.MX6 SABRELite        | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | nitrogen6x     | rocko       |
+| TechNexion i.MX7 PICO                   | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | imx7d-pico     | rocko       |
+| Toradex Apalis iMX6Q/D                  | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | apalis-imx6    | rocko       |
+| WaRP7                                   | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | imx7s-warp     | rocko       |
+| Wandboard i.MX6 QuadPlus/Quad/Dual/Solo | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | wandboard      | rocko       |
 
 
 If you need to use an earlier Yocto Project version, the **updatehub** is also supported. Currently, there is support for following previous Yocto Project versions:
