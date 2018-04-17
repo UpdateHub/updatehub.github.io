@@ -26,3 +26,5 @@
 ## Integration Guide
 
 * [Yocto Project](./Integration-Guide/README.md)
+  * [Integrating onto a existing product](./Integration-Guide/yoctoProjectBuild.md)
+* [Create a product](./Integration-Guide/createProduct.md)
