@@ -15,7 +15,7 @@ $: openssl genpkey -algorithm RSA -out ~/updatehub-keys/private_key.pem -pkeyopt
 Next we need to extract the public RSA key from the private key. Use the following command:
 
 ```
-$: openssl rsa -pubout -in private_key.pem -out ~/updatehub-keys/public_key.pem
+$: openssl rsa -pubout -in ~/updatehub-keys/private_key.pem -out ~/updatehub-keys/public_key.pem
 ```
 
 The keys need to be enabled inside your Yocto Project build configuration, so **updatehub** can deploy the public key inside the generated image and use the private key to sign the update package. You must set the `UPDATEHUB_UHUPKG_PRIVATE_KEY` and `UPDATEHUB_UHUPKG_PRIVATE_KEY` variables inside your `conf/local.conf` file as seen next:
