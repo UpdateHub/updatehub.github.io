@@ -4,7 +4,7 @@ node('docker') {
   stage('Checkout') {
     sh 'git rev-parse > /dev/null 2>&1 && git clean -dxf || true'
     checkout scm
-    sh "git describe --always > .git/git-describe"
+    sh "git describe --abbrev=7 --always > .git/git-describe"
     git_describe = readFile('.git/git-describe').trim()
     println git_describe
   }
@@ -13,7 +13,7 @@ node('docker') {
     def app = null
 
     stage('Build') {
-      sh 'git describe --always HEAD^ > .git/previous-git-describe || touch .git/previous-git-describe'
+      sh 'git describe --abbrev=7 --always HEAD^ > .git/previous-git-describe || touch .git/previous-git-describe'
       previous_git_describe = readFile('.git/previous-git-describe').trim()
 
       pull_failed = false
