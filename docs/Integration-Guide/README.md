@@ -1,8 +1,8 @@
 ## Yocto Project
 
-The **updatehub** offers a high quality integration for the Yocto Project and provides a ready to use support for a number of boards. Every six months, a new version of Yocto Project is released.
+The **UpdateHub** offers a high quality integration for the Yocto Project and provides a ready to use support for a number of boards. Every six months, a new version of Yocto Project is released.
 
-The current version is the Yocto Project 2.4, codename _rocko_, and its support is provided by the `meta-updatehub` layer. This layer provides all the infrastructure code to enable the use of Yocto Project together with the **updatehub**. The minimal set of layers to use the **updatehub** are:
+The current version is the Yocto Project 2.4, codename _rocko_, and its support is provided by the `meta-updatehub` layer. This layer provides all the infrastructure code to enable the use of Yocto Project together with the **UpdateHub**. The minimal set of layers to use the **UpdateHub** are:
 
 | Layer name                    | Branch name |
 |-------------------------------|-------------|
@@ -12,7 +12,7 @@ The current version is the Yocto Project 2.4, codename _rocko_, and its support 
 | meta-updatehub                | rocko       |
 
 
-Besides the basic support, there are many boards with **updatehub** support, provided by extra BSP integration layers, as shown at the table below:
+Besides the basic support, there are many boards with **UpdateHub** support, provided by extra BSP integration layers, as shown at the table below:
 
 |  Board full name                        | BSP layer name                                                                                              | Machine name   | Branch name |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------|----------------|-------------|
@@ -27,10 +27,10 @@ Besides the basic support, there are many boards with **updatehub** support, pro
 | Wandboard i.MX6 QuadPlus/Quad/Dual/Solo | [meta-updatehub-freescale](https://github.com/updatehub/meta-updatehub-freescale/tree/rocko)     | wandboard      | rocko       |
 
 
-If you need to use an earlier Yocto Project version, the **updatehub** is also supported. Currently, there is support for following previous Yocto Project versions:
+If you need to use an earlier Yocto Project version, the **UpdateHub** is also supported. Currently, there is support for following previous Yocto Project versions:
 
 * Yocto Project 2.1, codename _krogoth_
 * Yocto Project 2.2, codename _morty_
 * Yocto Project 2.3, codename _pyro_
 
-These earlier versions are actively supported by the **updatehub**, but features and compatible machines may vary among them.
+These earlier versions are actively supported by the **UpdateHub**, but features and compatible machines may vary among them.

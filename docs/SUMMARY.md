@@ -2,13 +2,13 @@
 
 ## Introduction
 
-* [What is updatehub?](README.md)
+* [What is UpdateHub?](README.md)
 * [Features](features.md)
 * [Basic Concepts](basics.md)
 
 ## Dashboard
 
-* [Meet the updatehub](./Dashboard/README.md)
+* [Meet the UpdateHub](./Dashboard/README.md)
 * [Creating a Product](./Dashboard/creatingProduct.md)
 * [Product Overview](./Dashboard/overview.md)
 * [Rollout List](./Dashboard/rolloutList.md)

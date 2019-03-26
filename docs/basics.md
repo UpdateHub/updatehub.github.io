@@ -1,6 +1,6 @@
 ## Basic Concepts
 
-There are few basic concepts that are important to understand the **updatehub**. Those basic concepts are detailed below:
+There are few basic concepts that are important to understand the **UpdateHub**. Those basic concepts are detailed below:
 
 ### Device
 
@@ -16,4 +16,4 @@ The `Rollout` is essentially a deployment plan. It can be simple as "send versio
 
 ### Product
 
-The basis that connects all together through the **updatehub** is the`Product`. Essentially the Product includes one or multiple `Devices` and for each of them there is a `Package` version that may be updated using a `Rollout`.
+The basis that connects all together through the **UpdateHub** is the`Product`. Essentially the Product includes one or multiple `Devices` and for each of them there is a `Package` version that may be updated using a `Rollout`.

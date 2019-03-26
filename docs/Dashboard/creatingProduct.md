@@ -1,6 +1,6 @@
 ## Creating a Product
 
-To create a product you need to access the `Products` page by clicking on **updatehub** logo in the navigation bar. On the `Products` page click`Add Product`.
+To create a product you need to access the `Products` page by clicking on **UpdateHub** logo in the navigation bar. On the `Products` page click`Add Product`.
 
 ![product add](/img/Dashboard/addProduct.png)
 

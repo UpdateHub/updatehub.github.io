@@ -8,4 +8,4 @@ You just need to go to the `Overview` or `Rollouts` page and click on `Create Ro
 
 ![create rollout advanced](/img/Dashboard/createRollout.png)
 
-Keep in mind that this method will trigger the `Rollout` for all the `Devices` accessible for the `Product` chosen, with no restrictions concerning the different hardware or other aspects of the fleet on the field. If the user desires to select which equipment receives the `Rollout` the **updatehub** offers the `Advanced Rollout` option. 
+Keep in mind that this method will trigger the `Rollout` for all the `Devices` accessible for the `Product` chosen, with no restrictions concerning the different hardware or other aspects of the fleet on the field. If the user desires to select which equipment receives the `Rollout` the **UpdateHub** offers the `Advanced Rollout` option. 

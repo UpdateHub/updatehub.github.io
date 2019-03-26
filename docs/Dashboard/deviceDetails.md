@@ -17,7 +17,7 @@ During a normal situation the device `Rollout` will be displayed showing the mom
 
 ![device finished](/img/Dashboard/finished.png)
 
-In the case of some kind of problem happens during the update process, the **updatehub** will provide a visual feedback of the moment it occured. To examine the failure you need to select `See Device Log`.
+In the case of some kind of problem happens during the update process, the **UpdateHub** will provide a visual feedback of the moment it occured. To examine the failure you need to select `See Device Log`.
 
 ![device installation](/img/Dashboard/deviceLog.png)
 

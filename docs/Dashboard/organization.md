@@ -1,6 +1,6 @@
 ### Organization
 
-In addition to the `Access Key` created for the user to work individually, the **updatehub** grants the possibility of more than one user to have acess to the same `Product`.
+In addition to the `Access Key` created for the user to work individually, the **UpdateHub** grants the possibility of more than one user to have acess to the same `Product`.
 
 Create an `Organization` is simple, as you just need to click on the `+ Create Organization` button and select a name for it. You will be automatically be set as Owner. After the creation of an `Organization` invitations for new members can be easily sent. The invite must contain the user's e-mail and the level of access allowed to him.
 
