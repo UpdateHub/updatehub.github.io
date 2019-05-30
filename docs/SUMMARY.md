@@ -5,6 +5,7 @@
 * [What is UpdateHub?](README.md)
 * [Features](features.md)
 * [Basic Concepts](basics.md)
+* [UpdateHub Server Editions](editions.md)
 
 ## Dashboard
 
