@@ -7,9 +7,9 @@
 * [Basic Concepts](basics.md)
 * [UpdateHub Server Editions](editions.md)
 
-## Dashboard
+## UpdateHub Cloud
 
-* [Meet the UpdateHub](./Dashboard/README.md)
+* [Overview](./Dashboard/README.md)
 * [Creating a Product](./Dashboard/creatingProduct.md)
 * [Product Overview](./Dashboard/overview.md)
 * [Rollout List](./Dashboard/rolloutList.md)

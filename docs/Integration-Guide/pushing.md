@@ -12,7 +12,7 @@ That will provide you three new BitBake tasks:
 
 * **uhuarchive**: allows you to export an update package for local usage. This is used when deploying the updates using a flash drive or during development where you can use the simple local server to test the update packages.
 
-* **uhupush**: sends the update package to the **UpdateHub** management server.
+* **uhupush**: sends the update package to the **UpdateHub** Cloud.
 
 As for the situations you need to export an update package for local usage without the internet connection, there is the option to do it by flash drive or local server. To do so use the following command line:
 
@@ -20,10 +20,10 @@ As for the situations you need to export an update package for local usage witho
 $: bitbake <image> -c uhuarchive
 ```
 
-The generation of an update package is very simple. After the integration of the **UpdateHub** with your Yocto Project build is complete, the `bitbake` tool can be used to generate and upload the update package. The following command does all the needed work in order to push the packages to the **UpdateHub** management server:
+The generation of an update package is very simple. After the integration of the **UpdateHub** with your Yocto Project build is complete, the `bitbake` tool can be used to generate and upload the update package. The following command does all the needed work in order to push the packages to the **UpdateHub** Cloud:
 
 ```
 $: bitbake <image> -c uhupush
 ```
 
-After running this, the **UpdateHub** management server will display that there is a new `Package` to update the `Devices` and you may start a `Rollout` through the dashboard.
+After running this, the **UpdateHub** Cloud will display that there is a new `Package` to update the `Devices` and you may start a `Rollout` through the interface.
