@@ -3,7 +3,7 @@
 ## Introduction
 
 * [What is UpdateHub?](README.md)
-* [Features](features.md)
+* [Supported Platforms](supported-platforms.md)
 * [Basic Concepts](basics.md)
 * [UpdateHub Server Editions](editions.md)
 
