@@ -1,0 +1,3 @@
+# answers
+
+* Can I delete a product? No it is not possible because...
