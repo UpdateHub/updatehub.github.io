@@ -231,10 +231,7 @@ go to your build directory and type:
 bitbake updatehub-image-base
 ```
 
-!!! info ""
-
-    The generate image process can take a good time, it is dependent
-    directly of the host resources.
+!!! info "The generate image process can take a good time, it is dependent directly of the host resources."
 
 Now it's time to flash the image in the SD card. Then in a terminal go to this
 directory:
@@ -245,13 +242,9 @@ build/tmp/deploy/images/raspberrypi3/
 
 and type this:
 
-!!! danger ""
+!!! danger "Check the name of the SD card before executing the command below!"
 
-    Check the name of the SD card before executing the command below!
-
-!!! tip ""
-
-    You can check the device name that correspond to SD card using command `dmesg`
+!!! tip "You can check the device name that correspond to SD card using command `dmesg`"
 
 ```
 zcat updatehub-image-base-raspberrypi3.wic.gz | sudo dd of=/dev/sdX

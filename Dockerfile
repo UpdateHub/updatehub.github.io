@@ -1,16 +1,16 @@
-FROM node:9.11.1-alpine as builder
+FROM python:3.8.2-alpine3.11 as mkdocs
 
-RUN npm install --global gitbook-cli && \
-	gitbook fetch 3.2.3
+WORKDIR /docs
 
-ADD book.json /usr/local/src/updatehub-docs/
-ADD docs /usr/local/src/updatehub-docs/docs
+COPY requirements.txt .
 
-WORKDIR /usr/local/src/updatehub-docs
+RUN pip install -r requirements.txt
 
-RUN gitbook install
-RUN gitbook build
+COPY mkdocs.yml .
+COPY docs docs
 
-FROM httpd:2.4.33-alpine
+RUN mkdocs build
 
-COPY --from=builder /usr/local/src/updatehub-docs/_book/ /usr/local/apache2/htdocs/
+FROM nginx:1.17.9-alpine
+
+COPY --from=mkdocs /docs/site /usr/share/nginx/html
