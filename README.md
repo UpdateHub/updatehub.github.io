@@ -9,11 +9,6 @@ After to clone just run the command to execute MkDocs server:
 ```
 mkdocs serve
 ```
-## How to run with Docker
-
-Build: docker build -t mkdocs .
-
-Run: docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs
 
 ## Structure
 
