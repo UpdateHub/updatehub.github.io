@@ -9,6 +9,9 @@ copyright: 'Copyright &copy; 2020 O.S. Systems'
 repo_name: 'OSSystems/updatehub-docs'
 repo_url: 'https://github.com/OSSystems/updatehub-docs'
 
+# Deployment
+remote_branch: master
+
 # Configuration
 theme:
   name: 'material'
