@@ -36,6 +36,7 @@ The support provided by the **UpdateHub** for the device includes:
 - Bootloader upgrade support \(U-Boot and GRUB\)
 - Flash support \(NAND, NOR\)
 - UBIFS support
+- Update package signature validation for security
 - Automated rollback in case of update fail
 - Conditional installation \(content, version and custom pattern support\)
 - Callback support for every update step
