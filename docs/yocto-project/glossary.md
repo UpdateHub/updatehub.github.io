@@ -3,12 +3,23 @@
 #### UPDATEHUB_PRODUCT_UID
  Identifies the product id in use. This is used by rollouts.
 
-#### UPDATEHUB_UHUPKG_PUBLIC_KEY / UPDATEHUB_UHUPKG_PRIVATE_KEY   
+#### UPDATEHUB_UHUPKG_PUBLIC_KEY
 
-  The variables are required to point to the keys which are used to validate and
-sign the update package.  
+The variable are required to point to the public key which are used to validate and
+sign the update package.
+The public key works together with the private key that is described below in
+UPDATEHUB_UHUPKG_PRIVATE_KEY, variable that points to the private key.
 
-  The keys may or not be stored on the layer. Commonly the keys are not available
+The keys may or not be stored on the layer. Commonly the keys are not available
+for developers and passed to the build system using the **local.conf** file of
+the autobuilder.
+
+#### UPDATEHUB_UHUPKG_PRIVATE_KEY
+
+The variable to point to private key that work in conjunction with the public key
+to ensure more security in authentication
+
+The keys may or not be stored on the layer. Commonly the keys are not available
 for developers and passed to the build system using the **local.conf** file of
 the autobuilder.
 
