@@ -45,8 +45,6 @@ This variable controls which filesystems should be supported. It supports
 different values, as 'btrfs', 'ext2', 'ext3', 'ext4', 'f2fs', 'jffs2', 'ubifs',
 'vfat' and 'xfs'.   
 
-###Optional variables:
-
 #### UPDATEHUB_SERVER_URL
 Specifies the updatehub Server address to use. This is required in
 case you are running it inside your private cloud.
