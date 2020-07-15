@@ -71,7 +71,9 @@ version of the distribution).
 It allows adding more information at the end of the variable name.
 
 #### UPDATEHUB_PRODUCT_UID
- Identifies the product id in use. This is used by rollouts.
+The UPDATEHUB_PRODUCT_UID identifies the product id in use. This is used by the
+updatehub server to identify the product and track the possible versions for
+rollouts.
 
 #### UPDATEHUB_RUNTIME_PACKAGES
 Is a variable configured to install some package in an image that supports UpdateHub,
