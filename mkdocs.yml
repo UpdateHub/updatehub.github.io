@@ -63,6 +63,7 @@ nav:
     - Package and Rollout: updatehub-cloud/package-rollout.md
     - Your menu account: updatehub-cloud/menu.md
   - Integrating with Yocto Project:
+    - Supported machines: yocto-project/supported-machines.md
     - Yocto Project guide: yocto-project/yocto-project-guide.md
     - Yocto Project reference: yocto-project/yocto-project-reference.md
     - Glossary of variables: yocto-project/glossary.md
