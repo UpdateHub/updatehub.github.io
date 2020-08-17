@@ -30,11 +30,13 @@ theme:
 extra:
   manifest: 'manifest.webmanifest'
   social:
-    - type: 'github'
+    - icon: 'fontawesome/brands/gitter'
+      link: 'https://gitter.im/UpdateHub'
+    - icon: 'fontawesome/brands/github-alt'
       link: 'https://github.com/OSSystems'
-    - type: 'twitter'
+    - icon: 'fontawesome/brands/twitter'
       link: 'https://twitter.com/OSSystemsNews?s=20'
-    - type: 'linkedin'
+    - icon: 'fontawesome/brands/linkedin'
       link: 'https://www.linkedin.com/company/ossystems'
 
 # Google Analytics
