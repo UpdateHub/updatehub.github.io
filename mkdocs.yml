@@ -23,8 +23,8 @@ theme:
     text: 'Roboto'
     code: 'Roboto Mono'
   logo: 'img/assets/favicon.ico'
-  feature:
-    tabs: true
+  features:
+    - tabs
 
 # Customization
 extra:
