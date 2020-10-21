@@ -16,15 +16,15 @@ remote_branch: master
 theme:
   name: 'material'
   language: 'en'
-  palette:
-    primary: 'indigo'
-    accent: 'indigo'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
   logo: 'img/assets/favicon.ico'
   features:
     - navigation.tabs
+
+extra_css:
+  - 'stylesheets/extra.css'
 
 # Customization
 extra:
