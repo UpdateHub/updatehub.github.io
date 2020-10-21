@@ -24,7 +24,7 @@ theme:
     code: 'Roboto Mono'
   logo: 'img/assets/favicon.ico'
   features:
-    - tabs
+    - navigation.tabs
 
 # Customization
 extra:
