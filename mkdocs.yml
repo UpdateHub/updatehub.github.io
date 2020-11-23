@@ -67,6 +67,7 @@ nav:
   - Handling UpdateHub agent:
     - Meeting the UpdateHub Agent: updatehub-agent/intro.md
     - The State Machine and the Flows: updatehub-agent/state-machine.md
+    - Controlling the Agent: updatehub-agent/controlling-agent.md
   - Integrating with Yocto Project:
     - Supported machines: yocto-project/supported-machines.md
     - Yocto Project guide: yocto-project/yocto-project-guide.md
