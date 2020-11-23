@@ -64,6 +64,8 @@ nav:
     - Handling a Device: updatehub-cloud/device.md
     - Package and Rollout: updatehub-cloud/package-rollout.md
     - Your menu account: updatehub-cloud/menu.md
+  - Handling UpdateHub agent:
+    - Meeting the UpdateHub Agent: updatehub-agent/intro.md
   - Integrating with Yocto Project:
     - Supported machines: yocto-project/supported-machines.md
     - Yocto Project guide: yocto-project/yocto-project-guide.md
