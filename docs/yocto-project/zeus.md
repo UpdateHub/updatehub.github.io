@@ -1,6 +1,6 @@
 #Yocto Project 3.0 (Zeus)
 
-In the version of Yocto Project 3.0 (Zeus) the following machines are supported:
+In the version of **Yocto Project** 3.0 (Zeus) the following machines are supported:
 
 Commercial name                            |Machine          |Layer                                                                                           |
 -------------------------------------------|-----------------|------------------------------------------------------------------------------------------------|

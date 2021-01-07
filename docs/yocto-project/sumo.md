@@ -1,6 +1,6 @@
 #Yocto Project 2.5 (Sumo)
 
-In the version of Yocto Project 2.5 (Sumo) the following machines are supported:
+In the version of **Yocto Project** 2.5 (Sumo) the following machines are supported:
 
 Commercial name                            |Machine          |Layer                                                                                           |
 -------------------------------------------|-----------------|------------------------------------------------------------------------------------------------|

@@ -1,6 +1,6 @@
 #Yocto Project 2.1 (Krogoth)
 
-In the version of Yocto Project 2.1 (Krogoth) the following machines are supported:
+In the version of **Yocto Project** 2.1 (Krogoth) the following machines are supported:
 
 Commercial name                                 |Machine         |Layer                                                                                              |
 ------------------------------------------------|----------------|---------------------------------------------------------------------------------------------------|

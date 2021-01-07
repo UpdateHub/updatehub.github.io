@@ -1,11 +1,7 @@
-The UpdateHub support multiple Yocto Project releases and the
-latest Yocto Project release we offer support for is the 3.1
-LTS (dunfell).
+The **UpdateHub** support multiple **Yocto Project** releases and the latest **Yocto Project** release we offer support for is the 3.1 LTS (dunfell).
 
 !!! danger ""
-    If you need to use an Yocto Project release different than
-    the 3.1 LTS (dunfell) release please refer to the respective
-    layers to check for compatibility.
+    If you need to use an **Yocto Project** release different than the 3.1 LTS (dunfell) release please refer to the respective layers to check for compatibility.
 
 Manufacturer    |Repository                                                                                                                 |
 ----------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -13,10 +9,7 @@ Freescale       |[https://github.com/UpdateHub/meta-updatehub-freescale.git](htt
 RaspberryPi     |[https://github.com/UpdateHub/meta-updatehub-raspberrypi.git](https://github.com/UpdateHub/meta-updatehub-raspberrypi.git) |
 Texas Intruments|[https://github.com/UpdateHub/meta-updatehub-ti.git](https://github.com/UpdateHub/meta-updatehub-ti.git)                   |
 
-UpdateHub has support for the machines specified in the table
-below. Remember that it is possible for other configurations to
-work correctly with UpdateHub, the machines that have been
-configured and tested are the ones informed here.
+UpdateHub has support for the machines specified in the table below. Remember that it is possible for other configurations to work correctly with UpdateHub, the machines that have been configured and tested are the ones informed here.
 
 Commercial name                            |Machine           |Layer                                                                                              |
 -------------------------------------------|------------------|---------------------------------------------------------------------------------------------------|

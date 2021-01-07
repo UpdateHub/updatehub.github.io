@@ -1,11 +1,11 @@
+Changing the **UpdateHub Agent** is very useful to the user because depending on the environment and goal, the settings must are custom. In this section we show the ways to interact and setting the **UpdateHub Agent** through the [Callbacks](#callbacks) use and the [SDK](#software-development-kit) functions.
 
-Changing the **UpdateHub Agent** is very useful to user, because depending of the enviroment and goal, the settings must are custom. In this section we show the ways to interact and setting the **UpdateHub Agent** through the [Callbacks](#callbacks) use and the [SDK](#software-development-kit) functions.
 
 ## Callbacks
 
 Callbacks are called during process flows that trigger sets of scripts and allow the user to add behavior to the **UpdateHub Agent** without changing the agent’s code directly. Callbacks are called upon entering individual states and then execute the assigned scripts. If the user wants, it is possible to change the callback call directly in the code to the most appropriate point of execution of the scripts.
 
-There are three types of the callback:
+There are three types of callback:
 
 **State change**: this callback is called on state changes and informs the current state of the machine. The [*Probe*](), [*Download*](), [*Install*](), [*Reboot*](), and [*Error*]() *states* use it.
 
@@ -15,19 +15,20 @@ There are three types of the callback:
 
 The callbacks are added during the **Yocto Project** image generating. To this, the script must be available in *meta-updatehub/updatehub*, together with the recipe (.bb) containing the settings necessary to install and run the script.
 
-Below we present the same script examples that quickly implement and allow agent behavior  flexibility.
+Below we present the same script examples that quickly implement and allow agent behavior flexibility.
 
 Here we have a simple function that checks a specified address to allow it to continue the process. In the *Reboot state*, the callback makes the agent ask a defined server for permission to proceed and wait for a 200 status code as an answer; anything different will cancel the reboot.
 
 <script src="https://gist.github.com/Domarys/f3e59d06fc4a3aa82c71555080a083fa.js"></script>
 
-Energy and data use management is critical in remote devices, so turning off the unused resources is smart. A script to turn on the GSM connection, for instance, is a good idea and is simple, as shown below:
+Energy and data use management are critical in remote devices, so turning off the unused resources is smart. A script to turn on the GSM connection, for instance, is a good idea and is simple, as shown below:
 
 <script src="https://gist.github.com/Domarys/4626c2ade9bc2c4167a7bd31119a04f0.js"></script>
 
 The code checks the current state and, if the state is probe state, it activates the GSM connection, allowing the device checks to available updates on the server to update.
 
-Many different use cases are applied in the **UpdateHub Agent** through the callbacks use. Still, sometimes you want to put this logic inside the application, for instance, to use a graphic screen or use more complex logic that depends on multiple data sources, for example. Those more advanced use cases can be fulfilled using the **UpdateHub SDK**, in various programming languages, as described in the [SDK section]().
+Many different use cases are applied in the **UpdateHub Agent** through the callbacks use. Still, sometimes you want to put this logic inside the application, for instance, to use a graphic screen or use more complex logic that depends on multiple data sources, for example. Those more advanced use cases can be fulfilled using the **UpdateHub SDK**, in various programming languages, as described in the SDK subsection below.
+
 
 ## Software Development Kit
 

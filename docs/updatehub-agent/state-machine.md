@@ -45,14 +45,13 @@ Here we present the steps performed in the state machine and the summary of exec
 
 An essential aspect of the state machine in use is that every activity is recycled between the states, adding more efficiency. The flow of the **Direct Download request** and the **Local Install request** as interesting to explore this as the activities are practically the same. The unique difference is that in the **Direct Download request**, the agents download the external update’s data, while in the **Local Install request**, the update’s data is in the local storage. The other activities are the same between the requests.
 
-You can find further information on [Dictionary of states](/updatehub-agent/dictionary-states), where detail and the activities of the state are described.
-
 
 ## Default behavior
 
 The **UpdateHub Agent** has two operation modes: it can automatically search for new updates on a pre-setted interval. It can also work in an idle mode where searching or installing an update is only triggered by an external interaction. These two different workflows are triggered by the configuration file that the agent reads upon starting.
 
 The other workflows are triggered by requests from an external HTTP API that the agent will be listening to, coming from the CLI application, or another program that wants to interact with the **UpdateHub Agent**.
+
 
 ### Automatic search
 
@@ -169,6 +168,7 @@ The command below abort the download:
 ```
 http://updatehub_agent:port/update/download/abort
 ```
+
 
 ## Others API requests
 

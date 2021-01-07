@@ -1,6 +1,7 @@
 # Yocto Project reference
 
-In this section we cover the topics that involve **UpdateHub** with **Yocto Project** such as adding UpdateHub layers, setting variables, access keys and glossary. review
+In this section we cover the topics that involve **UpdateHub** with **Yocto Project** such as adding **UpdateHub** layers, setting variables, access keys and glossary. review
+
 
 ## Supported version
 
@@ -45,20 +46,15 @@ If you need to use an earlier **Yocto Project** version, the **UpdateHub** is al
 !!! danger ""
     These earlier versions are actively supported by the **UpdateHub**, but features and compatible machines may vary among them.
 
+
 ## Adding layer to your project
 
-The first step is initialize the environment to build a **Linux** image
-using **Yocto Project**. To start working with **Yocto Project** we
-need to fetch all the needed layers, that includes the **poky**,
-*meta-openembedded*, *meta-raspberrypi*, *meta-updatehub* and
-*meta-updatehub-raspberrypi* layers. 
+The first step is initialize the environment to build a **Linux** image using **Yocto Project**. To start working with **Yocto Project** we need to fetch all the needed layers, that includes the **poky**, *meta-openembedded*, *meta-raspberrypi*, *meta-updatehub* and *meta-updatehub-raspberrypi* layers. 
 
-The [meta-updatehub](https://github.com/UpdateHub/meta-updatehub) is the
-layer that adds support to **UpdateHub** itself, and
-[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi)
-includes **UpdateHub** support for **Raspberry Pi** machines. In addition, we need to get the *meta-openembedded* layer, because **UpdateHub** has some dependencies, such as **Python 3** packages to create the [uhu](https://github.com/UpdateHub/uhu) utility used as UpdateHub package manager and will be covered in this guide.
+The [meta-updatehub](https://github.com/UpdateHub/meta-updatehub) is the layer that adds support to **UpdateHub** itself, and [meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi) includes **UpdateHub** support for **Raspberry Pi** machines. In addition, we need to get the *meta-openembedded* layer, because **UpdateHub** has some dependencies, such as **Python 3** packages to create the [uhu](https://github.com/UpdateHub/uhu) utility used as UpdateHub package manager and will be covered in this guide.
 
 Here we will show you two different approaches to download the necessary layers to support **UpdateHub**: one [using a platform](#using-updatehub-platform) which will download the necessary layers and add them automatically to the project, the other approach is to [manually download](#adding-the-layers-manually) and add these layers.
+
 
 ### Using UpdateHub Platform
 
@@ -86,10 +82,10 @@ source ./setup-environment build
 
 At the end of the commands you have every metadata you need to start working.
 
+
 ### Adding the layers manually
 
-To include the **updatehub** Yocto layers in your build is easy just clone the
-meta-updatehub layer and the machine support layer to your sources directory following the commands below:
+To include the **Updatehub** Yocto layers in your build is easy just clone the meta-updatehub layer and the machine support layer to your sources directory following the commands below:
 
 ```
 git clone https://github.com/openembedded/meta-openembedded -b zeus
@@ -132,9 +128,10 @@ bitbake-layers add-layer ../meta-updatehub-freescale/
 
 Done! Now you have the **UpdateHub** layer in your project.
 
+
 ## Configurating UpdateHub variables
  
-You should now to include *UpdateHub* system variables in *conf/local.conf*. The variables below are the basics for the correct configuration. More details and options see [Glossary of variables](../glossary).
+You should now to include **UpdateHub** system variables in *conf/local.conf*. The variables below are the basics for the correct configuration. More details and options see [Glossary of variables](../glossary).
 
 *UPDATEHUB_PRODUCT_UID* - identifies the product id in use and this is used by
 rollouts. It is [generate](../../updatehub-cloud/product/#how-to-create-a-product) in create process ends or you get this code in **UpdateHub** Dashboard, in *Product* page.
@@ -151,6 +148,7 @@ UPDATEHUB_ACCESS_SECRET = "9b1fcee96795fa5dea5cd04cb1d2..."
 UPDATEHUB_PACKAGE_VERSION_SUFFIX = "-test-image-1.0"
 ```
 
+
 ### Cases of adding layers manually
 
 !!! danger "If you have used the platform, the process below is not necessary, because the platform already has *updatehub-image* class configured."
@@ -160,12 +158,12 @@ In case you are not using the platform, in addition to the variable configuratio
 
 The your new image with **UpdateHub** support layer is ready. 
 
+
 ## RSA Key
 
 RSA keys are asymmetric encryption keys that serve to provide greater security in communications. 
 
-The **UpdateHub** verifies the authenticity of every *Package* update prior applying it. To do so, it uses a RSA key that to check if the *Package* has not been modified or corrupted by any means. Each device will contain the public key, *public_key.pem*, included on the device image, which will validate any received * Package* before unpacking, which must have been signed with the private key, *private_key.pem*, when generating the update package.
-
+The **UpdateHub** verifies the authenticity of every *Package* update prior applying it. To do so, it uses a RSA key that to check if the *Package* has not been modified or corrupted by any means. Each device will contain the public key, *public_key.pem*, included on the device image, which will validate any received *Package* before unpacking, which must have been signed with the private key, *private_key.pem*, when generating the update package.
 
 !!! danger "Although these keys are not mandatory on UpdateHub, we advise their use as an additional data protection mechanism." 
 
@@ -173,6 +171,7 @@ In this session we will cover:
 
 - [Generating a RSA Key](#generating-a-rsa-key)
 - [Setting up RSA Key](#setting-up-rsa-key)
+
 
 ### Generating a RSA Key
 
@@ -188,6 +187,7 @@ Next we need to extract the public RSA key from the private key. Use the followi
 openssl rsa -pubout -in ~/updatehub-keys/private_key.pem -out ~/updatehub-keys/public_key.pem
 ```
 
+
 ### Setting up RSA Key
 
 The keys need to be enabled inside your **Yocto Project** build configuration, so **UpdateHub** can deploy the public key inside the generated image and use the private key to sign the update package. You must set the *UPDATEHUB_UHUPKG_PRIVATE_KEY* and *UPDATEHUB_UHUPKG_PRIVATE_KEY* variables inside your *conf/local.conf* file as seen next:
@@ -199,6 +199,7 @@ UPDATEHUB_UHUPKG_PUBLIC_KEY = "~/updatehub-keys/public_key.pem"
 
 !!! danger "Keep save your RSA keys"
     Once a device is deployed using a RSA key, the same key is used to validate every update package send to this device. It is important to keep the RSA keys safe or you'll not be able to send updates for those devices.
+
 
 ## Pushing an update package
 

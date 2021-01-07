@@ -1,6 +1,6 @@
 #Yocto Project 2.4 (Rocko)
 
-In the version of Yocto Project 2.4 (Rocko) the following machines are supported:
+In the version of **Yocto Project** 2.4 (Rocko) the following machines are supported:
 
 Commercial name                            |Machine          |Layer                                                                                            |
 -------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------|

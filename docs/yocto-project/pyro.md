@@ -1,6 +1,6 @@
 #Yocto Project 2.3 (Pyro)
 
-In the version of Yocto Project 2.3 (Pyro) the following machines are supported:
+In the version of **Yocto Project** 2.3 (Pyro) the following machines are supported:
 
 Commercial name                                 |Machine         |Layer                                                                                           |
 ------------------------------------------------|----------------|------------------------------------------------------------------------------------------------|

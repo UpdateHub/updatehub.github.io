@@ -1,6 +1,6 @@
 #Yocto Project 2.2 (Morty)
 
-In the version of Yocto Project 2.2 (Morty) the following machines are supported:
+In the version of **Yocto Project** 2.2 (Morty) the following machines are supported:
 
 Commercial name                                 |Machine         |Layer                                                                                            |
 ------------------------------------------------|----------------|-------------------------------------------------------------------------------------------------|
