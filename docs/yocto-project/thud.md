@@ -1,6 +1,6 @@
 #Yocto Project 2.6 (Thud)
 
-In the version of Yocto Project 2.6 (Thud) the following machines are supported:
+In the version of **Yocto Project** 2.6 (Thud) the following machines are supported:
 
 Commercial name                            |Machine          |Layer                                                                                           |
 -------------------------------------------|-----------------|------------------------------------------------------------------------------------------------|

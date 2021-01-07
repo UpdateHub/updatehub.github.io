@@ -1,6 +1,6 @@
 #Yocto Project 2.7 (Warrior)
 
-In the version of Yocto Project 2.7 (Warrior) the following machines are supported:
+In the version of **Yocto Project** 2.7 (Warrior) the following machines are supported:
 
 Commercial name                            |Machine          |Layer                                                                                              |
 -------------------------------------------|-----------------|---------------------------------------------------------------------------------------------------|

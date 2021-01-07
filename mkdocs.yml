@@ -57,7 +57,6 @@ nav:
   - Introduction: index.md
   - What is UpdateHub: what-is-updatehub.md
   - Quick starting with Raspberry Pi 3: quick-starting-with-raspberrypi3.md
-  - FAQ: faq/faq-questions.md
   - Using UpdateHub Cloud: 
     - UpdateHub Cloud dashboard: updatehub-cloud/dashboard.md
     - Managing a Product: updatehub-cloud/product.md
@@ -73,3 +72,4 @@ nav:
     - Yocto Project guide: yocto-project/yocto-project-guide.md
     - Yocto Project reference: yocto-project/yocto-project-reference.md
     - Glossary of variables: yocto-project/glossary.md
+  - FAQ: faq/faq-questions.md
