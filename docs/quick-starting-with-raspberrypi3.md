@@ -58,7 +58,7 @@ To download the platform source, that will download all layers:
 ```
 mkdir updatehub-get-started
 cd updatehub-get-started
-repo init -u https://github.com/fbertux/updatehub-yocto-project-get-started.git
+repo init -u https://github.com/UpdateHub/updatehub-yocto-project-get-started.git -b dunfell
 repo sync
 ```
 
