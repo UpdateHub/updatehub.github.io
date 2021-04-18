@@ -72,4 +72,6 @@ nav:
     - Yocto Project guide: yocto-project/yocto-project-guide.md
     - Yocto Project reference: yocto-project/yocto-project-reference.md
     - Glossary of variables: yocto-project/glossary.md
+  - Integrating with Zephyr Project:
+    - Zephyr Project guide: zephyr-project/zephyr-project-guide.md
   - FAQ: faq/faq-questions.md
