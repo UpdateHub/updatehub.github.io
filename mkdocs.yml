@@ -38,6 +38,9 @@ extra:
       link: 'https://twitter.com/OSSystemsNews?s=20'
     - icon: 'fontawesome/brands/linkedin'
       link: 'https://www.linkedin.com/company/ossystems'
+  google_analytics:
+    - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_ID"]
+    - auto
 
 # Google Analytics
 google_analytics:
