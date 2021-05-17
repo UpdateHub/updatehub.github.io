@@ -75,3 +75,8 @@ nav:
   - Integrating with Zephyr Project:
     - Zephyr Project guide: zephyr-project/zephyr-project-guide.md
   - FAQ: faq/faq-questions.md
+
+extra:
+google_analytics:
+    - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_ID"]
+    - auto
