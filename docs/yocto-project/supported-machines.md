@@ -17,6 +17,7 @@ Beaglebone Black                           |beaglebone        |[meta-updatehub-t
 Boundary Devices Nitrogen6X                |nitrogen6x        |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/hardknott)     |
 NXP i.MX6 SABRE Automotive Board           |imx6qdlsabreauto  |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/hardknott)     |
 NXP i.MX6 SABRE Platform for Smart Devices |imx6qdlsabresd    |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/hardknott)     |
+Raspberry Pi 0                             |raspberrypi0      |[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi/tree/hardknott) |
 Raspberry Pi 3 Model B and B+              |raspberrypi3      |[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi/tree/hardknott) |
 Raspberry Pi 4 Model B                     |raspberrypi4      |[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi/tree/hardknott) |
 TechNexion PICO i.MX7                      |imx7d-pico        |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/hardknott)     |
@@ -33,6 +34,7 @@ Beaglebone Black                           |beaglebone       |[meta-updatehub-ti
 Boundary Devices Nitrogen6X                |nitrogen6x       |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/dunfell)     |
 NXP i.MX6 SABRE Automotive Board           |imx6qdlsabreauto |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/dunfell)     |
 NXP i.MX6 SABRE Platform for Smart Devices |imx6qdlsabresd   |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/dunfell)     |
+Raspberry Pi 0                             |raspberrypi0      |[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi/tree/dunfell)|
 Raspberry Pi 3 Model B and B+              |raspberrypi3     |[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi/tree/dunfell) |
 Raspberry Pi 4 Model B                     |raspberrypi4     |[meta-updatehub-raspberrypi](https://github.com/UpdateHub/meta-updatehub-raspberrypi/tree/dunfell) |
 TechNexion PICO i.MX7                      |imx7d-pico       |[meta-updatehub-freescale](https://github.com/UpdateHub/meta-updatehub-freescale/tree/dunfell)     |
