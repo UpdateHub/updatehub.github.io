@@ -1,0 +1,1699 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="All your devices, always updated">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.3">
+    
+    
+      
+        <title>Zephyr Project guide - UpdateHub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.62128196.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zephyr-project-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UpdateHub" class="md-header__button md-logo" aria-label="UpdateHub" data-md-component="logo">
+      
+  <img src="../../img/assets/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UpdateHub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Zephyr Project guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UpdateHub/updatehub.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    UpdateHub/updatehub.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../what-is-updatehub/" class="md-tabs__link">
+      What is UpdateHub
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../quick-starting-with-raspberrypi3/" class="md-tabs__link">
+      Quick starting with Raspberry Pi 3
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../updatehub-cloud/dashboard/" class="md-tabs__link">
+        Using UpdateHub Cloud
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../updatehub-agent/intro/" class="md-tabs__link">
+        Handling UpdateHub agent
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../yocto-project/supported-machines/" class="md-tabs__link">
+        Integrating with Yocto Project
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Integrating with Zephyr Project
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/faq-questions/" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UpdateHub" class="md-nav__button md-logo" aria-label="UpdateHub" data-md-component="logo">
+      
+  <img src="../../img/assets/favicon.ico" alt="logo">
+
+    </a>
+    UpdateHub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UpdateHub/updatehub.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    UpdateHub/updatehub.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-is-updatehub/" class="md-nav__link">
+        What is UpdateHub
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick-starting-with-raspberrypi3/" class="md-nav__link">
+        Quick starting with Raspberry Pi 3
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Using UpdateHub Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Using UpdateHub Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Using UpdateHub Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-cloud/dashboard/" class="md-nav__link">
+        UpdateHub Cloud dashboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-cloud/product/" class="md-nav__link">
+        Managing a Product
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-cloud/device/" class="md-nav__link">
+        Handling a Device
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-cloud/package-rollout/" class="md-nav__link">
+        Package and Rollout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-cloud/menu/" class="md-nav__link">
+        Your menu account
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Handling UpdateHub agent
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Handling UpdateHub agent" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Handling UpdateHub agent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-agent/intro/" class="md-nav__link">
+        Meeting the UpdateHub Agent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-agent/state-machine/" class="md-nav__link">
+        The State Machine and the Flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../updatehub-agent/controlling-agent/" class="md-nav__link">
+        Controlling the Agent
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Integrating with Yocto Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integrating with Yocto Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Integrating with Yocto Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yocto-project/supported-machines/" class="md-nav__link">
+        Supported machines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yocto-project/yocto-project-guide/" class="md-nav__link">
+        Yocto Project guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yocto-project/yocto-project-reference/" class="md-nav__link">
+        Yocto Project reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yocto-project/glossary/" class="md-nav__link">
+        Glossary of variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Integrating with Zephyr Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integrating with Zephyr Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Integrating with Zephyr Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Zephyr Project guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Zephyr Project guide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-and-running" class="md-nav__link">
+    Building and Running
+  </a>
+  
+    <nav class="md-nav" aria-label="Building and Running">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-buildflash-mcuboot" class="md-nav__link">
+    Step 1: Build/Flash MCUboot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-start-the-updatehub-server" class="md-nav__link">
+    Step 2: Start the UpdateHub Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Start the UpdateHub Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-21-updatehub-ce-community-edition" class="md-nav__link">
+    Step 2.1: UpdateHub-CE (Community Edition)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-22-updatehub-cloud" class="md-nav__link">
+    Step 2.2: UpdateHub Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-updatehub-sample" class="md-nav__link">
+    Step 3: Configure UpdateHub Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-build-updatehub-app" class="md-nav__link">
+    Step 4: Build UpdateHub App
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Build UpdateHub App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-41-build-for-ethernet" class="md-nav__link">
+    Step 4.1: Build for Ethernet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-42-build-for-wifi" class="md-nav__link">
+    Step 4.2: Build for WiFi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-43-build-for-modem" class="md-nav__link">
+    Step 4.3: Build for Modem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-44-build-for-ieee-802154-experimental" class="md-nav__link">
+    Step 4.4: Build for IEEE 802.15.4 [experimental]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-45-build-for-ble-ipsp-experimental" class="md-nav__link">
+    Step 4.5: Build for BLE IPSP [experimental]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-46-build-for-openthread-network-experimental" class="md-nav__link">
+    Step 4.6: Build for OpenThread Network [experimental]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-sign-the-app-image" class="md-nav__link">
+    Step 5: Sign the app image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-flash-the-app-image" class="md-nav__link">
+    Step 6: Flash the app image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-signing-the-binary-test-image" class="md-nav__link">
+    Step 7: Signing the binary test image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-create-a-package-with-updatehub-utilities-uhu" class="md-nav__link">
+    Step 8: Create a package with UpdateHub Utilities (uhu)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-add-the-package-to-server" class="md-nav__link">
+    Step 9: Add the package to server
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 9: Add the package to server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-91-updatehub-ce" class="md-nav__link">
+    Step 9.1: UpdateHub-CE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-92-updatehub-cloud" class="md-nav__link">
+    Step 9.2: UpdateHub Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-10-register-device-on-server" class="md-nav__link">
+    Step 10: Register device on server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-11-create-a-rollout" class="md-nav__link">
+    Step 11: Create a rollout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-12-run-the-update" class="md-nav__link">
+    Step 12: Run the update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-13-reboot-the-system" class="md-nav__link">
+    Step 13: Reboot the system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/faq-questions/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-and-running" class="md-nav__link">
+    Building and Running
+  </a>
+  
+    <nav class="md-nav" aria-label="Building and Running">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-buildflash-mcuboot" class="md-nav__link">
+    Step 1: Build/Flash MCUboot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-start-the-updatehub-server" class="md-nav__link">
+    Step 2: Start the UpdateHub Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Start the UpdateHub Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-21-updatehub-ce-community-edition" class="md-nav__link">
+    Step 2.1: UpdateHub-CE (Community Edition)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-22-updatehub-cloud" class="md-nav__link">
+    Step 2.2: UpdateHub Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-updatehub-sample" class="md-nav__link">
+    Step 3: Configure UpdateHub Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-build-updatehub-app" class="md-nav__link">
+    Step 4: Build UpdateHub App
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Build UpdateHub App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-41-build-for-ethernet" class="md-nav__link">
+    Step 4.1: Build for Ethernet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-42-build-for-wifi" class="md-nav__link">
+    Step 4.2: Build for WiFi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-43-build-for-modem" class="md-nav__link">
+    Step 4.3: Build for Modem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-44-build-for-ieee-802154-experimental" class="md-nav__link">
+    Step 4.4: Build for IEEE 802.15.4 [experimental]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-45-build-for-ble-ipsp-experimental" class="md-nav__link">
+    Step 4.5: Build for BLE IPSP [experimental]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-46-build-for-openthread-network-experimental" class="md-nav__link">
+    Step 4.6: Build for OpenThread Network [experimental]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-sign-the-app-image" class="md-nav__link">
+    Step 5: Sign the app image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-flash-the-app-image" class="md-nav__link">
+    Step 6: Flash the app image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-signing-the-binary-test-image" class="md-nav__link">
+    Step 7: Signing the binary test image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-create-a-package-with-updatehub-utilities-uhu" class="md-nav__link">
+    Step 8: Create a package with UpdateHub Utilities (uhu)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9-add-the-package-to-server" class="md-nav__link">
+    Step 9: Add the package to server
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 9: Add the package to server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-91-updatehub-ce" class="md-nav__link">
+    Step 9.1: UpdateHub-CE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-92-updatehub-cloud" class="md-nav__link">
+    Step 9.2: UpdateHub Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-10-register-device-on-server" class="md-nav__link">
+    Step 10: Register device on server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-11-create-a-rollout" class="md-nav__link">
+    Step 11: Create a rollout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-12-run-the-update" class="md-nav__link">
+    Step 12: Run the update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-13-reboot-the-system" class="md-nav__link">
+    Step 13: Reboot the system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/UpdateHub/updatehub.github.io/edit/master/docs/zephyr-project/zephyr-project-guide.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="zephyr-project-guide">Zephyr Project guide<a class="headerlink" href="#zephyr-project-guide" title="Permanent link">&para;</a></h1>
+<p>UpdateHub agent for Zephyr makes it simple to remotely update all your embedded devices.  It handles
+all aspects related to sending Firmware Over-the-Air (FOTA) updates with maximum security and
+efficiency, while you focus on adding value to your product. The UpdateHub Zephyr Agent can works
+on two modes: polling and manual update.</p>
+<p>Polling mode runs automatically on a predefined period, probing the server for updates and
+installing them without requiring user intervention.</p>
+<p>Manual mode requires the user to call the server probe and then, if there is an available update,
+also requires the user to decide if it is appropriate to update now or later.</p>
+<p>The UpdateHub Zephyr Demo uses Zephyr network management callbacks to know when the agent should
+start, see <a href="https://github.com/zephyrproject-rtos/zephyr/tree/master/samples/subsys/mgmt/updatehub/src/main.c">sample source code</a>.</p>
+<h2 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>The Zephyr port of <code>UpdateHub</code> was initialy developed to run on a
+  <a href="https://docs.zephyrproject.org/latest/boards/arm/frdm_k64f/doc/index.html">Freedom-K64F <frdm_k64f></a>
+  kit using the ethernet connectivity.  The application should build and run for other platforms with
+  same connectivity.</p>
+</li>
+<li>
+<p>The sample provides <a href="https://docs.zephyrproject.org/latest/guides/dts/howtos.html?troubleshoot-devicetree-issues#set-devicetree-overlays">overlay</a>
+  files to enable other tecnologies like WIFI, modem, BLE IPSP, 802.15.4 or OpenThread.  These
+  technologies depends on hardware resources and the correspondent overlay was designed to be generic
+  instead full optimized.</p>
+</li>
+<li>
+<p>It is important understand that some wireless technologies may require a gateway or some sort of
+  border router.  It is out of scope provide such configuration in details.</p>
+</li>
+<li>
+<p>The MCUboot bootloader is required for <code>UpdateHub</code> work properly.  Before chose a platform to
+  test, make sure that SoC and board have support to it.  UpdateHub currently uses two slots to
+  perform the upgrade.  More information about Device Firmware Upgrade subsystem and MCUboot can be
+  found in <a href="https://docs.zephyrproject.org/latest/guides/device_mgmt/dfu.html#mcuboot">MCUboot</a>.</p>
+</li>
+<li>
+<p><code>UpdateHub</code> acts like a service on Zephyr. It is heavily dependent on Zephyr sub-systems and it
+  uses CoAP over UDP.</p>
+</li>
+</ul>
+<h2 id="building-and-running">Building and Running<a class="headerlink" href="#building-and-running" title="Permanent link">&para;</a></h2>
+<p>Before start, make sure follow steps from
+<a href="https://docs.zephyrproject.org/latest/getting_started/index.html">Zephyr Getting Started Guide</a>.</p>
+<p>The below steps describe how to build and run the <code>UpdateHub</code> sample in
+Zephyr.  Open a terminal <code>terminal 1</code> and navigate to your Zephyr project
+directory.  This allows contruct and run everything from a common place.</p>
+<div class="codehilite"><pre><span></span><code>    ls
+    bootloader  modules  tools  zephyr
+</code></pre></div>
+
+<h3 id="step-1-buildflash-mcuboot">Step 1: Build/Flash MCUboot<a class="headerlink" href="#step-1-buildflash-mcuboot" title="Permanent link">&para;</a></h3>
+<p>The MCUboot can be build following the instructions in the
+<a href="https://docs.zephyrproject.org/latest/guides/device_mgmt/dfu.html#mcuboot">MCUboot</a> documentation
+page.  Flash the resulting image file using west on <code>terminal 1</code>.</p>
+<div class="codehilite"><pre><span></span><code>    # From the root of the zephyr repository
+    west build -b frdm_k64f -d build/mcuboot-frdm_k64f bootloader/mcuboot/boot/zephyr
+    west flash -d build/mcuboot-frdm_k64f
+</code></pre></div>
+
+<h3 id="step-2-start-the-updatehub-server">Step 2: Start the UpdateHub Server<a class="headerlink" href="#step-2-start-the-updatehub-server" title="Permanent link">&para;</a></h3>
+<h4 id="step-21-updatehub-ce-community-edition">Step 2.1: UpdateHub-CE (Community Edition)<a class="headerlink" href="#step-21-updatehub-ce-community-edition" title="Permanent link">&para;</a></h4>
+<p>The Zephyr sample application is configured by default to use the UpdateHub-CE server edition.  This
+version implies you need run your own server.  The UpdateHub-CE is distributed as a docker container
+and can be on your local network or even instaled on a service provider like Digital Ocean, Vultr etc.
+To start using the UpdateHub-CE simple execute the docker command with the following parameters on
+another terminal <code>terminal 2</code>.</p>
+<div class="codehilite"><pre><span></span><code>    docker run -it -p 8080:8080 -p 5683:5683/udp --rm updatehub/updatehub-ce:latest
+</code></pre></div>
+
+<h4 id="step-22-updatehub-cloud">Step 2.2: UpdateHub Cloud<a class="headerlink" href="#step-22-updatehub-cloud" title="Permanent link">&para;</a></h4>
+<p>The UpdateHub Cloud is an enterprise-grade solution.  It provides almost same resources than
+UpdateHub-CE with the DTLS as main diferential.  For more details on how to use the UpdateHub Cloud
+please refer to the documentation on <a href="../../updatehub-cloud/dashboard">UpdateHub Cloud</a>.  The
+UpdateHub Cloud has the option to use CoAPS/DTLS or not.  If you want to use the CoAPS/DTLS, simply
+add the <code>overlay-dtls.conf</code> when building the sample.  You can use the provided certificate for
+test this example or create your own.  The below procedure instruct how create a new certificate
+using openssl on a Linux machine on terminal <code>terminal 2</code>.</p>
+<div class="codehilite"><pre><span></span><code>    openssl genrsa -out privkey.pem 512
+    openssl req -new -x509 -key privkey.pem -out servercert.pem
+</code></pre></div>
+
+<p>The <code>servercert</code> and <code>privkey</code> files must be embedded in the application by <code>certificates.h</code>
+file.  The following procedure can be used to generated the required <code>der</code> files:</p>
+<div class="codehilite"><pre><span></span><code>    openssl x509 -in servercert.pem -outform DER -out servercert.der
+    openssl pkcs8 -topk8 -inform PEM -outform DER -nocrypt -in privkey.pem -out privkey.der
+</code></pre></div>
+
+<p>The <code>der</code> files should be placed on the sample source at certificates directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using UpdateHub Cloud server it is necessary update your own <code>overlay-prj.conf</code> with
+option <code>CONFIG_UPDATEHUB_CE</code> equal <code>n</code>.</p>
+</div>
+<h3 id="step-3-configure-updatehub-sample">Step 3: Configure UpdateHub Sample<a class="headerlink" href="#step-3-configure-updatehub-sample" title="Permanent link">&para;</a></h3>
+<p>The updatehub have several Kconfig options that are necessary configure to make it work or tune
+communication.</p>
+<p>Set <code>CONFIG_UPDATEHUB_CE</code> select between UpdateHub edition.  The <code>y</code> value will select
+UpdateHub-CE otherwise <code>n</code> selects UpdateHub Cloud.</p>
+<p>Set <code>CONFIG_UPDATEHUB_SERVER</code> with your local IP address that runs the UpdateHub-CE server
+edition.  If your are using a service provider a DNS name is a valid option too.  This option is
+only valid when using UpdateHub-CE.</p>
+<p>Set <code>CONFIG_UPDATEHUB_POLL_INTERVAL</code> with the polling period of your preference, remembering that
+the limit is between 0 and 43200 minutes (30 days).  The default value is 1440 minutes (24h).</p>
+<p>Set <code>CONFIG_UPDATEHUB_PRODUCT_UID</code> with your product ID.  When using UpdateHub-CE the valid is
+available at <code>overlay-prj.conf.example</code> file.</p>
+<h3 id="step-4-build-updatehub-app">Step 4: Build UpdateHub App<a class="headerlink" href="#step-4-build-updatehub-app" title="Permanent link">&para;</a></h3>
+<p>In order to correctly build UpdateHub the overlay files must be use correctly.
+More information about overlay files in :ref:<code>important-build-vars</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is out of scope at this moment provide support for experimental features.  However, the
+configuration and use is similar to the start point indicated on the experimental network
+interface.</p>
+</div>
+<h4 id="step-41-build-for-ethernet">Step 4.1: Build for Ethernet<a class="headerlink" href="#step-41-build-for-ethernet" title="Permanent link">&para;</a></h4>
+<p>The ethernet depends only from base configuration.</p>
+<div class="codehilite"><pre><span></span><code>    west build -b [ frdm_k64f | nucleo_f767zi ] \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DOVERLAY_CONFIG=overlay-prj.conf
+</code></pre></div>
+
+<h4 id="step-42-build-for-wifi">Step 4.2: Build for WiFi<a class="headerlink" href="#step-42-build-for-wifi" title="Permanent link">&para;</a></h4>
+<p>For WiFi, it needs add <code>overlay-wifi.conf</code>.  Here a shield provides WiFi connectivity using, for
+instance, arduino headers.  See <a href="https://docs.zephyrproject.org/latest/boards/shields/esp_8266/doc/index.html#module-esp-8266">ESP-8266 Module</a>
+for details.</p>
+<div class="codehilite"><pre><span></span><code>    west build -b [ frdm_k64f | nrf52840dk_nrf52840 | nucleo_f767zi ] \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DSHIELD=esp_8266_arduino \
+    -DOVERLAY_CONFIG=&quot;overlay-wifi.conf;overlay-prj.conf&quot;
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The board <code>disco_l475_iot1</code> is not supported.  The es-WIFI driver currently doesn't support UDP.</p>
+</div>
+<h4 id="step-43-build-for-modem">Step 4.3: Build for Modem<a class="headerlink" href="#step-43-build-for-modem" title="Permanent link">&para;</a></h4>
+<p>Modem needs add <code>overlay-modem.conf</code>.  Now, a DTC overlay file is used to configure the glue
+between the modem and an arduino headers.  The modem config uses PPP over GSM modem,
+see <a href="https://docs.zephyrproject.org/latest/samples/net/gsm_modem/README.html#gsm-modem-sample">Generic GSM Modem Sample</a>.</p>
+<div class="codehilite"><pre><span></span><code>    west build -b [ frdm_k64f | nrf52840dk_nrf52840 | nucleo_f767zi ] \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DOVERLAY_CONFIG=&quot;overlay-modem.conf;overlay-prj.conf&quot; \
+    -DDTC_OVERLAY_FILE=arduino.overlay
+</code></pre></div>
+
+<h4 id="step-44-build-for-ieee-802154-experimental">Step 4.4: Build for IEEE 802.15.4 [experimental]<a class="headerlink" href="#step-44-build-for-ieee-802154-experimental" title="Permanent link">&para;</a></h4>
+<p>For IEEE 802.15.4 needs add <code>overlay-802154.conf</code>.  This requires two nodes: one will be the host
+and the second one will be the device under test.  The validation needs a Linux kernel &gt;= 4.9 with
+all 6loWPAN support.  The start point is try reproduce the Zephyr
+<a href="https://docs.zephyrproject.org/latest/samples/net/wpanusb/README.html#wpanusb-sample">wpanusb sample</a>.
+It is out of scope at this moment provide support since it is experimental.  The gateway was tested
+with both native linux driver and <code>atusb</code> and with <code>wpanusb</code> sample.</p>
+<div class="codehilite"><pre><span></span><code>    west build -b nrf52840dk_nrf52840 \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DOVERLAY_CONFIG=&quot;overlay-802154.conf;overlay-prj.conf&quot;
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>    west build -b [ frdm_k64f | nucleo_f767zi ] \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DSHIELD=atmel_rf2xx_arduino \
+    -DOVERLAY_CONFIG=&quot;overlay-802154.conf;overlay-prj.conf&quot;
+</code></pre></div>
+
+<h4 id="step-45-build-for-ble-ipsp-experimental">Step 4.5: Build for BLE IPSP [experimental]<a class="headerlink" href="#step-45-build-for-ble-ipsp-experimental" title="Permanent link">&para;</a></h4>
+<p>The BLE IPSP needs <code>overlay-ipsp.conf</code>.  This may requires two nodes:
+one will be the host and the second one will be the device under test.  The
+validation needs a Linux kernel &gt;= 4.9 with all 6loWPAN support.  In this
+particular case the Bluetooth 6LoWPAN module is needed. The start point is try
+reproduce the Zephyr
+<a href="https://docs.zephyrproject.org/latest/samples/bluetooth/ipsp/README.html#bluetooth-ipsp-sample">Bluetooth: ipsp sample</a>.
+It is out of scope at this moment provide support since it is experimental.  The gateway was tested
+with native linux driver and an USB dongle.</p>
+<div class="codehilite"><pre><span></span><code>    west build -b nrf52840dk_nrf52840 \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DOVERLAY_CONFIG=&quot;overlay-ipsp.conf;overlay-prj.conf&quot;
+</code></pre></div>
+
+<h4 id="step-46-build-for-openthread-network-experimental">Step 4.6: Build for OpenThread Network [experimental]<a class="headerlink" href="#step-46-build-for-openthread-network-experimental" title="Permanent link">&para;</a></h4>
+<p>The OpenThread requries the <code>overlay-ot.conf</code>.  It requires two nodes: one will be the host NCP
+and the second one will be the device under test.  The validation needs a Linux kernel &gt;= 4.9 with
+optional NAT-64 support.  The start point is try reproduce the
+<a href="https://openthread.io/guides/border-router">OpenThread Router</a>.
+It is out of scope at this moment provide support since it is experimental.  The gateway was tested
+using two boards with OpenThread 1.1.1 on NCP mode.</p>
+<div class="codehilite"><pre><span></span><code>    west build -b nrf52840dk_nrf52840 \
+    -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+    -DOVERLAY_CONFIG=&quot;overlay-ot.conf;overlay-prj.conf&quot;
+</code></pre></div>
+
+<h3 id="step-5-sign-the-app-image">Step 5: Sign the app image<a class="headerlink" href="#step-5-sign-the-app-image" title="Permanent link">&para;</a></h3>
+<p>The app image is the application itself that will be on the board.  This app will connect to
+UpdateHub server and check for new images.  The image will be loaded on the board with version 1.0.0.
+It is important check what file format you SoC tools uses.  In general, Zephyr can create images with
+binary (<code>.bin</code>) image format or Intel's (<code>.hex</code>) image format.</p>
+<p>The Zephyr provide the <code>west</code> tool that simplify the signing process.  Just call west with proper
+parameter values:</p>
+<div class="codehilite"><pre><span></span><code>  west sign -t imgtool -d build/app -- --version 1.0.0 --pad \
+    --key bootloader/mcuboot/root-rsa-2048.pem
+
+  === image configuration:
+  partition offset: 131072 (0x20000)
+  partition size: 393216 (0x60000)
+  rom start offset: 512 (0x200)
+  === signing binaries
+  unsigned bin: &lt;zephyrdir&gt;/build/app/zephyr/zephyr.bin
+  signed bin:   &lt;zephyrdir&gt;/build/app/zephyr/zephyr.signed.bin
+</code></pre></div>
+
+<h3 id="step-6-flash-the-app-image">Step 6: Flash the app image<a class="headerlink" href="#step-6-flash-the-app-image" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>    west flash -d build/app --bin-file build/app/zephyr/zephyr.signed.bin
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note: Command variation to flash a <code>hex</code> file</p>
+<p><code>west flash -d build/app --hex-file build/app/zephyr/zephyr.signed.hex</code></p>
+</div>
+<p>At this point you can access a third terminal <code>terminal 3</code> to check if image is running.  Open the
+<code>terminal 3</code> and press reset on your board:</p>
+<div class="codehilite"><pre><span></span><code>    minicom -D /dev/ttyACM0
+</code></pre></div>
+
+<h3 id="step-7-signing-the-binary-test-image">Step 7: Signing the binary test image<a class="headerlink" href="#step-7-signing-the-binary-test-image" title="Permanent link">&para;</a></h3>
+<p>The test image needs different parameters to add the signature.  Pay attention to make sure you are
+creating the right signed image.  The test image will be created with version 2.0.0 in this tutorial:</p>
+<div class="codehilite"><pre><span></span><code>  west sign --no-hex --bin -B build/zephyr-2.0.0.bin -t imgtool -d build/app -- \
+    --version 2.0.0 --key bootloader/mcuboot/root-rsa-2048.pem
+
+  === image configuration:
+  partition offset: 131072 (0x20000)
+  partition size: 393216 (0x60000)
+  rom start offset: 512 (0x200)
+  === signing binaries
+  unsigned bin: &lt;zephyrdir&gt;/build/app/zephyr/zephyr.bin
+  signed bin:   build/zephyr-2.0.0.bin
+</code></pre></div>
+
+<h3 id="step-8-create-a-package-with-updatehub-utilities-uhu">Step 8: Create a package with UpdateHub Utilities (uhu)<a class="headerlink" href="#step-8-create-a-package-with-updatehub-utilities-uhu" title="Permanent link">&para;</a></h3>
+<p>First, install UpdateHub Utilities (<code>uhu</code>) on your system, using:</p>
+<div class="codehilite"><pre><span></span><code>    pip3 install --user uhu
+</code></pre></div>
+
+<p>After installing uhu you will need to set the <code>product-uid</code>.  The value for UpdateHub-CE can be
+found at <code>overlay-prj.conf.example</code> file.  For UpdateHub Cloud, you need copy the value from the
+web interface.</p>
+<div class="codehilite"><pre><span></span><code>    uhu product use &quot;e4d37cfe6ec48a2d069cc0bbb8b078677e9a0d8df3a027c4d8ea131130c4265f&quot;
+</code></pre></div>
+
+<p>Then, add the package and its mode (<code>zephyr</code>):</p>
+<div class="codehilite"><pre><span></span><code>    uhu package add build/zephyr-2.0.0.bin -m zephyr
+</code></pre></div>
+
+<p>Then inform what <code>version</code> this image is:</p>
+<div class="codehilite"><pre><span></span><code>   uhu package version 2.0.0
+</code></pre></div>
+
+<p>And finally you can build the package by running:</p>
+<div class="codehilite"><pre><span></span><code>    uhu package archive --output build/zephyr-2.0.0.pkg
+</code></pre></div>
+
+<p>The remaining steps are dedicated to UpdateHub-CE.  If you are using UpdateHub Cloud you can find
+the proper procedure at <code>docs.updatehub.io</code>_.</p>
+<h3 id="step-9-add-the-package-to-server">Step 9: Add the package to server<a class="headerlink" href="#step-9-add-the-package-to-server" title="Permanent link">&para;</a></h3>
+<h4 id="step-91-updatehub-ce">Step 9.1: UpdateHub-CE<a class="headerlink" href="#step-91-updatehub-ce" title="Permanent link">&para;</a></h4>
+<p>Add the package to the UpdateHub-CE server.  Open your browser to the server URL, <code>&lt;your-ip-address&gt;:8080</code>,
+and logging into the server using <code>admin</code> as the login and password by default.  After logging in,
+click on the package menu, then <code>UPLOAD PACKAGE</code>, and select the package built in step 8.</p>
+<h4 id="step-92-updatehub-cloud">Step 9.2: UpdateHub Cloud<a class="headerlink" href="#step-92-updatehub-cloud" title="Permanent link">&para;</a></h4>
+<p>UpdateHub Cloud allows manager packages only by API.  To enable API access by terminal, add
+following three environment variables:</p>
+<div class="codehilite"><pre><span></span><code>    export UHU_ACCESS_ID=&quot;&lt;email address&gt;-&lt;id number&gt;&quot;
+    export UHU_ACCESS_SECRET=&quot;&lt;your secret&gt;&quot;
+    export UHU_SERVER_URL=&quot;https://api.updatehub.io&quot;
+</code></pre></div>
+
+<p>The last step is call <code>package push</code> to send package built in step 8 to UpdateHub cloud server.</p>
+<div class="codehilite"><pre><span></span><code>    uhu package push
+</code></pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can be easilly integrated with a CI/CD development workflow</p>
+</div>
+<h3 id="step-10-register-device-on-server">Step 10: Register device on server<a class="headerlink" href="#step-10-register-device-on-server" title="Permanent link">&para;</a></h3>
+<p>If you chose <code>Manual</code>, register your device at updatehub server by using the terminal session
+where you are debugging the board <code>terminal 3</code>. Type the following command:</p>
+<div class="codehilite"><pre><span></span><code>    updatehub run
+</code></pre></div>
+
+<p>If everything is alright, it will print on the screen <code>No update available</code>.</p>
+<p>For <code>Polling</code> mode, the system will automatically register your device after
+<code>CONFIG_UPDATEHUB_POLL_INTERVAL</code> minutes.  The <code>updatehub run</code> can be used to speed-up.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The message <code>Could not receive data</code> means that the application was not able to reached the
+updatehub server for some reason.  The most common cases are server down, missing network routes
+and forget to change the content of <code>overlay-prj.conf</code> file.</p>
+</div>
+<h3 id="step-11-create-a-rollout">Step 11: Create a rollout<a class="headerlink" href="#step-11-create-a-rollout" title="Permanent link">&para;</a></h3>
+<p>In the browser where the UpdateHub-CE is open, click on <code>menu Rollout</code> and then <code>CREATE ROLLOUT</code>.
+Select the version of the package that you added in step 9.  With that, the update is published, and
+the server is ready to accept update requests.</p>
+<h3 id="step-12-run-the-update">Step 12: Run the update<a class="headerlink" href="#step-12-run-the-update" title="Permanent link">&para;</a></h3>
+<p>Back in the terminal session that you used for debugging the board, type the following command:</p>
+<div class="codehilite"><pre><span></span><code>    updatehub run
+</code></pre></div>
+
+<p>And then wait.  The board will probe the server, check if there are any new updates, and then
+download the update package you've just created. If everything goes fine the message
+<code>Image flashed successfully, you can reboot now</code> will be printed on the terminal.  If you are
+using the <code>Polling</code> mode the board will reboot automatically and Step 13 can be skipped.</p>
+<h3 id="step-13-reboot-the-system">Step 13: Reboot the system<a class="headerlink" href="#step-13-reboot-the-system" title="Permanent link">&para;</a></h3>
+<p>In the terminal you used for debugging the board, type the following command:</p>
+<div class="codehilite"><pre><span></span><code>    kernel reboot cold
+</code></pre></div>
+
+<p>Your board will reboot and then start with the new image.  After rebooting, the board will
+automatically ping the server again and the message <code>No update available</code> will be printed on the
+terminal.  You can check the newer version using the following command:</p>
+<div class="codehilite"><pre><span></span><code>    uart:~$ updatehub info
+    Unique device id: acbdef0123456789
+    Firmware Version: 2.0.0
+    Product uid: e4d37cfe6ec48a2d069cc0bbb8b078677e9a0d8df3a027c4d8ea131130c4265f
+    UpdateHub Server: &lt;server ip/dns&gt;
+    uart:~$
+</code></pre></div>
+
+<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h2>
+<p>The below list of hardware have been used by UpdateHub team.</p>
+<table>
+<thead>
+<tr>
+<th align="left">ID</th>
+<th align="center">Network Interface</th>
+<th align="center">Shield / Device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="center">Ethernet</td>
+<td align="center">Native</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="center">WIFI</td>
+<td align="center"><a href="https://docs.zephyrproject.org/latest/boards/shields/esp_8266/doc/index.html#module-esp-8266">ESP-8266</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="center">MODEM (PPP)</td>
+<td align="center">SIMCOM 808</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="center">IEEE 802.15.4 (6loWPAN)</td>
+<td align="center">Native, <a href="https://docs.zephyrproject.org/latest/boards/shields/atmel_rf2xx/doc/index.html#atmel-at86rf2xx-transceivers">RF2xx</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="center">BLE IPSP (6loWPAN)</td>
+<td align="center">Native</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="center">OpenThread Network</td>
+<td align="center">Native</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Board</th>
+<th align="center">Network Interface ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://docs.zephyrproject.org/latest/boards/arm/frdm_k64f/doc/index.html#frdm-k64f">NXP FRDM-K64F</a></td>
+<td align="center">1, 2, 3, 4</td>
+</tr>
+<tr>
+<td align="left"><a href="https://docs.zephyrproject.org/latest/boards/arm/nrf52840dk_nrf52840/doc/index.html#nrf52840dk-nrf52840">nRF52840 DK</a></td>
+<td align="center">2, 3, 4, 5, 6</td>
+</tr>
+<tr>
+<td align="left"><a href="https://docs.zephyrproject.org/latest/boards/arm/nucleo_f767zi/doc/index.html#nucleo-f767zi-board">ST Nucleo F767ZI</a></td>
+<td align="center">1, 2, 3, 4</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../yocto-project/glossary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Glossary of variables" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Glossary of variables
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../faq/faq-questions/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              FAQ
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 O.S. Systems
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://gitter.im/UpdateHub" target="_blank" rel="noopener" title="gitter.im" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/OSSystems" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/OSSystemsNews?s=20" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/ossystems" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e0abf5b0.min.js"></script>
+      
+    
+  </body>
+</html>
