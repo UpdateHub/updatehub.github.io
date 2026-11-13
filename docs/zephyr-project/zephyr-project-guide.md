@@ -84,28 +84,48 @@ another terminal ``terminal 2``.
 
 #### Step 2.2: UpdateHub Cloud
 
-The UpdateHub Cloud is an enterprise-grade solution.  It provides almost same resources than
-UpdateHub-CE with the DTLS as main diferential.  For more details on how to use the UpdateHub Cloud
-please refer to the documentation on [UpdateHub Cloud](../../updatehub-cloud/dashboard).  The
-UpdateHub Cloud has the option to use CoAPS/DTLS or not.  If you want to use the CoAPS/DTLS, simply
-add the ``overlay-dtls.conf`` when building the sample.  You can use the provided certificate for
-test this example or create your own.  The below procedure instruct how create a new certificate
-using openssl on a Linux machine on terminal ``terminal 2``.
+The UpdateHub Cloud is an enterprise-grade solution.  It provides almost the same resources as
+UpdateHub-CE, with DTLS as the main differential.  For more details on how to use the UpdateHub
+Cloud please refer to the documentation on [UpdateHub Cloud](../../updatehub-cloud/dashboard).
 
-```
-    openssl genrsa -out privkey.pem 512
-    openssl req -new -x509 -key privkey.pem -out servercert.pem
-```
+The UpdateHub Cloud accepts plain CoAP on ``coap.updatehub.io`` port 5683 and CoAPS (DTLS 1.2) on
+port 5684.  To use CoAPS, add ``overlay-dtls.conf`` when building the sample.  The server
+authenticates with an ECDSA P-256 certificate signed by an UpdateHub root CA, using the
+``TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`` cipher suite.  The device verifies that chain and the
+server name.  The device does not authenticate itself with a certificate, so you do not generate
+keys or certificates and the device never holds a private key.
 
-The ``servercert`` and ``privkey`` files must be embedded in the application by ``certificates.h``
-file.  The following procedure can be used to generated the required ``der`` files:
+The device must trust both UpdateHub root CAs:
 
-```
-    openssl x509 -in servercert.pem -outform DER -out servercert.der
-    openssl pkcs8 -topk8 -inform PEM -outform DER -nocrypt -in privkey.pem -out privkey.der
-```
+| Root | Role | SHA-256 fingerprint |
+|------|------|---------------------|
+| [UpdateHub Device Root CA R1](certificates/updatehub-root-ca-r1.pem) | Signs the current server certificate | ``D2:D8:AB:2C:24:05:FC:1D:71:85:7C:96:62:3C:B6:60:11:2A:D2:32:77:74:89:52:29:CA:58:88:E7:02:49:3E`` |
+| [UpdateHub Device Root CA R2](certificates/updatehub-root-ca-r2.pem) | Standby root | ``73:E8:0C:AE:CF:AD:A9:4E:89:0C:EC:F4:E1:C0:D1:39:F6:90:D5:E8:EB:D7:7E:74:09:3D:7B:29:A0:1D:C2:AB`` |
 
-The ``der`` files should be placed on the sample source at certificates directory.
+Ship both roots in your products: the server can then move to R2 without a firmware update.  Both
+are also available as a single [PEM bundle](certificates/updatehub-root-ca.pem).  Zephyr keeps one
+credential per type and security tag, so register the bundle once as a
+``TLS_CREDENTIAL_CA_CERTIFICATE`` instead of adding the roots one by one.
+
+!!! warning
+    Zephyr releases up to and including v4.5 cannot complete a verified DTLS handshake with
+    UpdateHub Cloud: the client never sets the server name, and the sample registers its
+    certificate as its own identity instead of a trusted CA.  The fix is proposed upstream in
+    [zephyrproject-rtos/zephyr#125786](https://github.com/zephyrproject-rtos/zephyr/pull/125786),
+    which also ships the root bundle above in the sample.  Until it is part of your Zephyr
+    version, apply the patches for Zephyr main or v4.5 from
+    [UpdateHub/updatehub-coaps-e2e](https://github.com/UpdateHub/updatehub-coaps-e2e), which also
+    has an end-to-end test harness.
+
+With those patches, ``overlay-dtls.conf`` selects the cipher suite and sets a 24 KiB mbedTLS heap.
+Do not go below 20 KiB: the allocator fragments and handshakes fail at 16 KiB.  On a Cortex-M4
+(``frdm_k64f``) CoAPS adds about 80 KB of flash and 37 KB of RAM to the sample.
+
+!!! note
+    Certificate validity dates are only checked when ``CONFIG_MBEDTLS_HAVE_TIME_DATE`` is enabled,
+    which requires a trusted wall clock (for example SNTP or an RTC) to be set before the first
+    connection.  With the option enabled and no valid clock, the handshake rejects every
+    certificate as not yet valid.
 
 !!! note
     When using UpdateHub Cloud server it is necessary update your own ``overlay-prj.conf`` with
@@ -121,8 +141,8 @@ Set ``CONFIG_UPDATEHUB_CE`` select between UpdateHub edition.  The ``y`` value w
 UpdateHub-CE otherwise ``n`` selects UpdateHub Cloud.
 
 Set ``CONFIG_UPDATEHUB_SERVER`` with your local IP address that runs the UpdateHub-CE server
-edition.  If your are using a service provider a DNS name is a valid option too.  This option is
-only valid when using UpdateHub-CE.
+edition.  If your are using a service provider a DNS name is a valid option too.  With the patches
+from Step 2.2 it also applies to UpdateHub Cloud, where it defaults to ``coap.updatehub.io``.
 
 Set ``CONFIG_UPDATEHUB_POLL_INTERVAL`` with the polling period of your preference, remembering that
 the limit is between 0 and 43200 minutes (30 days).  The default value is 1440 minutes (24h).
@@ -149,6 +169,13 @@ The ethernet depends only from base configuration.
     west build -b [ frdm_k64f | nucleo_f767zi ] \
     -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
     -DOVERLAY_CONFIG=overlay-prj.conf
+```
+
+To use CoAPS with UpdateHub Cloud (see Step 2.2), add ``overlay-dtls.conf``:
+
+```
+    west build -b frdm_k64f -d build/app zephyr/samples/subsys/mgmt/updatehub -- \
+      -DEXTRA_CONF_FILE="overlay-dtls.conf;overlay-prj.conf"
 ```
 
 #### Step 4.2: Build for WiFi
